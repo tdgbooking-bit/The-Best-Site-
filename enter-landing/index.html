@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTER BUILDING</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop class="bg-video">
+        <source src="../src/assets/iStock-2253622537.mp4" type="video/mp4">
+    </video>
+    <div class="center">
+        <button class="enter-btn chrome-hearts" id="enter-btn">ENTER BUILDING</button>
+    </div>
+    <script>
+      document.getElementById('enter-btn').addEventListener('click', function() {
+        window.location.href = '../src/pages/subscribe.html';
+      });
+    </script>
+</body>
+</html>

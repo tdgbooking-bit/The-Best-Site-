@@ -1,0 +1,49 @@
+<h1>Shop Our Collection</h1>
+<section id="product-list">
+    <div class="product">
+        <h2>T-Shirt</h2>
+        <p>$20</p>
+        <button class="buy-btn" data-price="20">Buy Now</button>
+    </div>
+    <div class="product">
+        <h2>Hat</h2>
+        <p>$15</p>
+        <button class="buy-btn" data-price="15">Buy Now</button>
+    </div>
+    <div class="product">
+        <h2>Jacket</h2>
+        <p>$50</p>
+        <button class="buy-btn" data-price="50">Buy Now</button>
+    </div>
+</section>
+<script>
+    document.querySelectorAll('.buy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const price = parseInt(btn.dataset.price);
+            // Simulate purchase
+            alert('Purchase successful!');
+            // Award points to referrer based on purchase amount
+            let points = 0;
+            if (price < 100) {
+                points = 25;
+            } else if (price < 200) {
+                points = 50;
+            } else {
+                points = 100;
+            }
+            const referrer = sessionStorage.getItem('referrer');
+            if (referrer) {
+                // Find user by id and add points
+                const users = JSON.parse(localStorage.getItem('users')) || {};
+                for (let u in users) {
+                    if (users[u].id == referrer) {
+                        users[u].points += points;
+                        localStorage.setItem('users', JSON.stringify(users));
+                        alert('Referrer earned ' + points + ' points!');
+                        break;
+                    }
+                }
+            }
+        });
+    });
+</script>

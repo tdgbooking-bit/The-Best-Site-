@@ -1,0 +1,26 @@
+<div class="subscribe-container">
+    <h1>Welcome to Our Clothing Brand</h1>
+    <button id="enter-btn">Enter</button>
+    <div id="subscribe-form" style="display: none;">
+        <h2>Subscribe to Our Newsletter</h2>
+        <form id="email-form">
+            <input type="email" id="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+</div>
+<script>
+    document.getElementById('enter-btn').addEventListener('click', function() {
+        document.getElementById('subscribe-form').style.display = 'block';
+        this.style.display = 'none';
+    });
+    document.getElementById('email-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('email').value;
+        alert('Thank you for subscribing with: ' + email);
+        // Show navbar to access the site
+        if (window.showNavbar) window.showNavbar();
+        // Here you can send the email to a server or API
+    });
+</script></content>
+<parameter name="filePath">c:\Users\kmack\OneDrive\Desktop\clothing-brand-website\src\pages\subscribe.html
