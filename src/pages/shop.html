@@ -4,6 +4,11 @@
         Your browser does not support the video tag.
     </video>
 </div>
+<nav class="shop-nav">
+    <a href="#" class="shop-link">SHOP ALL</a>
+    <a href="#" class="shop-link">MEN</a>
+    <a href="#" class="shop-link">WOMEN</a>
+</nav>
 <h1>Shop Our Collection</h1>
 <section id="product-list">
     <div class="product">
@@ -23,6 +28,34 @@
     </div>
 </section>
 <style>
+    .shop-nav {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding: 2em 0 1em 0;
+        background: rgba(0,0,0,0.35);
+        font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
+        letter-spacing: 2px;
+    }
+    .shop-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 0.2em 1.2em;
+        border-radius: 0.5em;
+        transition: background 0.2s, color 0.2s;
+    }
+    .shop-link:hover {
+        background: #fff;
+        color: #000;
+    }
     .video-bg {
         position: fixed;
         top: 0;
