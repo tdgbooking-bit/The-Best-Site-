@@ -7,27 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="video-bg">
-  <video autoplay muted loop playsinline>
+<div class="hero-bg">
+  <video class="hero-video" autoplay muted loop playsinline>
     <source src="iStock-2253622537.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
-<header class="shop-header">
-  <h1 class="home-title">HOME</h1>
-</header>
-<main style="text-align:center;padding:4em 2em;">
-  <h2 class="welcome-main">Welcome to Subliminal World</h2>
-  <p class="welcome-sub">Discover the latest trends and exclusive drops for men, women, and kids.</p>
-  <p style="font-size:1.1em;color:#ccc;margin-top:1em;letter-spacing:1px;">This site is intentionally minimal.</p>
-  <nav class="shop-nav" style="margin-top:2em;">
-    <a href="/shop/index.html" class="chrome-hearts">SHOP</a>
-    <a href="/shop/index.html" class="chrome-hearts">ALL</a>
-    <a href="/shop/men.html" class="chrome-hearts">MEN</a>
-    <a href="/shop/women.html" class="chrome-hearts">WOMEN</a>
-    <a href="/shop/kids.html" class="chrome-hearts">KIDS</a>
-  </nav>
-</main>
+<div class="hero-text" id="hero-text">
+  <h1 class="hero-title">SUBLIMINAL WORLD</h1>
+  <p class="hero-sub">Designed beyond the obvious.</p>
+</div>
 <script>
 const filterLinks = document.querySelectorAll(".shop-nav a");
 const products = document.querySelectorAll(".product");
@@ -47,6 +36,61 @@ filterLinks.forEach(link => {
 });
 </script>
 <style>
+    .hero-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .hero-video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      min-width: 100vw;
+      min-height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      filter: brightness(0.92) contrast(1.08) saturate(1.1);
+      /* Slow-motion effect: use a slow video or adjust playbackRate in JS */
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+      z-index: 2;
+    }
+    .hero-title {
+      font-size: 4.5em;
+      font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
+      letter-spacing: 8px;
+      color: #fff;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.22), 0 0 4px #fff;
+      margin-bottom: 0.5em;
+    }
+    .hero-sub {
+      font-size: 2.2em;
+      font-family: 'Cinzel', 'Playfair Display', serif;
+      color: #fff;
+      letter-spacing: 3px;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.18);
+      margin-bottom: 2em;
+    }
+  <script>
+  // Fade in hero text after 1.5 seconds
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      document.getElementById('hero-text').style.opacity = 1;
+    }, 1500);
+  });
+  </script>
   html, body {
     height: 100%;
     margin: 0;
