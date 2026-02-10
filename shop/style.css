@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Times New Roman", serif;
+}
+
+body {
+    background: #000;
+    color: #fff;
+}
+
+.shop-header {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.shop-header h1 {
+    font-size: 48px;
+    letter-spacing: 6px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 60px;
+}
+
+.product {
+    cursor: pointer;
+}
+
+.product img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 0.3s ease;
+}
+
+.product:hover img {
+    filter: grayscale(0%);
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.name {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.price {
+    font-size: 12px;
+    opacity: 0.7;
+}
