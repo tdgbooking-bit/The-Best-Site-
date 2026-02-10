@@ -9,7 +9,7 @@
 <body>
 <div class="video-bg">
   <video autoplay muted loop playsinline>
-    <source src="shop/../src/assets/iStock-2253622537.mp4" type="video/mp4">
+    <source src="iStock-2253622537.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
@@ -27,6 +27,24 @@
     <a href="/shop/kids.html">KIDS</a>
   </nav>
 </main>
+<script>
+const filterLinks = document.querySelectorAll(".shop-nav a");
+const products = document.querySelectorAll(".product");
+
+filterLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const filter = link.dataset.filter;
+    products.forEach(product => {
+      if (filter === "all" || product.dataset.category === filter) {
+        product.classList.remove("hidden");
+      } else {
+        product.classList.add("hidden");
+      }
+    });
+  });
+});
+</script>
 <style>
   html, body {
     height: 100%;
