@@ -14,7 +14,7 @@
   </video>
 </div>
 <header class="shop-header">
-  <h1>HOME</h1>
+  <h1 class="home-title">HOME</h1>
 </header>
 <main style="text-align:center;padding:4em 2em;">
   <h2 class="welcome-main">Welcome to Subliminal World</h2>
@@ -27,25 +27,61 @@
   </nav>
 </main>
 <style>
-  .welcome-main {
-    font-size: 3.2em;
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: #000;
+  }
+  .video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .video-bg video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .home-title {
+    font-size: 4.2em;
     font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
-    letter-spacing: 4px;
+    letter-spacing: 8px;
+    margin-bottom: 0.7em;
+    text-align: center;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.22), 0 0 4px #fff;
+  }
+  .welcome-main {
+    font-size: 3.8em;
+    font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
+    letter-spacing: 6px;
     margin-bottom: 0.5em;
     text-align: center;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.18), 0 0 2px #fff;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.18), 0 0 3px #fff;
   }
   .welcome-sub {
-    font-size: 1.6em;
+    font-size: 2.1em;
     font-family: 'Cinzel', 'Playfair Display', serif;
-    letter-spacing: 2px;
-    margin-bottom: 2em;
+    letter-spacing: 3px;
+    margin-bottom: 2.5em;
     text-align: center;
-    max-width: 700px;
+    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
     color: #fff;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.18);
+    text-shadow: 0 1px 6px rgba(0,0,0,0.18);
   }
 </style>
 </body>

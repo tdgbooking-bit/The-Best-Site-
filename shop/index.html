@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>SHOP — SUBLIMINAL WORLD</title>
-    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                width: 100vw;
+                min-height: 100vh;
+                overflow-x: hidden;
+                background: #000;
+            }
+            .video-bg {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: -1;
+                overflow: hidden;
+            }
+            .video-bg video {
+                width: 100vw;
+                height: 100vh;
+                object-fit: cover;
+                min-width: 100vw;
+                min-height: 100vh;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        </style>
 </head>
 <body>
 <div class="video-bg">
