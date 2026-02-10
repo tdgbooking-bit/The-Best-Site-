@@ -1,13 +1,25 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Times New Roman", serif;
+    font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
 }
 
 body {
     background: #000;
     color: #fff;
+    min-height: 100vh;
+}
+/* Video background covers entire shop page */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .shop-header {
