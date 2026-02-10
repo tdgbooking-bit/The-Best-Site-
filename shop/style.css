@@ -1,3 +1,10 @@
+.product {
+    transition: opacity 0.3s ease;
+}
+
+.product.hidden {
+    display: none;
+}
 
 .chrome-hearts {
     font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif !important;
