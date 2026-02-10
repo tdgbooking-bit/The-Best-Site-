@@ -1,3 +1,18 @@
+.rotate-logo {
+    width: 140px;
+    display: block;
+    margin: 0 auto;
+    animation: slowRotate 30s linear infinite;
+}
+
+@keyframes slowRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
 .product {
     transition: opacity 0.3s ease;
 }
