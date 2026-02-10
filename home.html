@@ -14,6 +14,7 @@
   </video>
 </div>
 <header class="shop-header">
+  <img src="shop/images/logo.png" alt="Logo" class="rotate-logo" style="width:120px;height:auto;margin-bottom:18px;">
   <h1 class="home-title">HOME</h1>
 </header>
 <main style="text-align:center;padding:4em 2em;">
@@ -46,6 +47,17 @@ filterLinks.forEach(link => {
 });
 </script>
 <style>
+    .rotate-logo {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      animation: rotateLogo 6s linear infinite;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.18));
+    }
+    @keyframes rotateLogo {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   html, body {
     height: 100%;
     margin: 0;
