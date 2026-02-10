@@ -1,3 +1,48 @@
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+    html, body {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+    .center {
+        width: 95vw;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -45%);
+        padding: 0 2vw;
+    }
+    .enter-btn.chrome-hearts {
+        font-size: 2.5em;
+        padding: 0.2em 0.5em;
+    }
+    #subscribe-form {
+        width: 90vw;
+        font-size: 1em;
+    }
+    #subscribe-label, .subscribe-btn {
+        font-size: 1em !important;
+    }
+    input[type="email"] {
+        width: 80vw !important;
+        font-size: 1em !important;
+    }
+}
+/* Video background styles */
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.video-bg video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 body {
     font-family: 'Cinzel', serif;
     margin: 0;
