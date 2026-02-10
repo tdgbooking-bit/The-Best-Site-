@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'ChromeGothic';
-    src: url('./fonts/UnifrakturCook-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
 
 .chrome-hearts {
     font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif !important;
