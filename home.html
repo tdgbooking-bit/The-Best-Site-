@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
+<div id="cursor-glow"></div>
 <div class="hero-bg">
   <video class="hero-video" autoplay muted loop playsinline>
     <source src="iStock-2253622537.mp4" type="video/mp4">
@@ -36,6 +37,41 @@ filterLinks.forEach(link => {
 });
 </script>
 <style>
+      /* Cursor Glow Effect */
+      #cursor-glow {
+        position: fixed;
+        pointer-events: none;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.04) 80%, transparent 100%);
+        box-shadow: 0 0 32px 12px rgba(255,255,255,0.18);
+        z-index: 9999;
+        mix-blend-mode: lighten;
+        opacity: 0.7;
+        transition: transform 0.18s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.2s;
+      }
+      body.fade-transition {
+        opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+    <script>
+    // Cursor Glow Effect
+    document.addEventListener('mousemove', function(e) {
+      const glow = document.getElementById('cursor-glow');
+      glow.style.left = (e.clientX - 24) + 'px';
+      glow.style.top = (e.clientY - 24) + 'px';
+    });
+
+    // Fade transitions on scroll
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', function() {
+      document.body.classList.add('fade-transition');
+      setTimeout(() => {
+        document.body.classList.remove('fade-transition');
+      }, 400);
+    });
+    </script>
     .hero-bg {
       position: fixed;
       top: 0;
@@ -84,11 +120,11 @@ filterLinks.forEach(link => {
       margin-bottom: 2em;
     }
   <script>
-  // Fade in hero text after 1.5 seconds
+  // Fade in hero text after 5 seconds
   window.addEventListener('DOMContentLoaded', function() {
     setTimeout(function() {
       document.getElementById('hero-text').style.opacity = 1;
-    }, 1500);
+    }, 5000);
   });
   </script>
   html, body {
