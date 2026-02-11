@@ -1,3 +1,21 @@
+body {
+    background-color: black;
+    color: white;
+}
+.product-card {
+    text-align: center;
+    background: transparent;
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.product-card img:hover {
+    transform: scale(1.05);
+}
 .product-grid img:hover {
     transform: scale(1.05);
     filter: brightness(1.1) drop-shadow(0 2px 8px #fff);
