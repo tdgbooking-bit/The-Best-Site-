@@ -1,3 +1,72 @@
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.product-card {
+    background: #111;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin: 15px 0 10px;
+}
+
+.product-card button {
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+/* Men's Products Section */
+.mens-products {
+    padding: 80px 60px;
+    background: #000;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 50px;
+}
+
+.product-card {
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    filter: grayscale(100%);
+    transition: all 0.4s ease;
+}
+
+.product-card:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.03);
+}
+
+.product-name {
+    margin-top: 14px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #aaa;
+}
 .rotate-logo {
     width: 140px;
     display: block;
@@ -78,6 +147,8 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px;
     padding: 60px;
+    position: relative;
+    z-index: 2;
 }
 
 .product {

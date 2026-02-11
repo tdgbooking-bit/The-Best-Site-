@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>KIDS — SUBLIMINAL WORLD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <meta name="description" content="Shop kids' fashion at Subliminal World. Premium tees, hoodies, and more.">
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
@@ -37,18 +40,59 @@
   </style>
 </head>
 <body>
-<div class="video-bg">
-  <video class="bg-video" autoplay muted loop playsinline>
+<nav style="position:relative; z-index:2; background:#111; padding:20px; text-align:center;">
+  <a href="kids.html" style="color:#fff; text-decoration:none; font-size:18px;">Kids</a>
+</nav>
+<section class="product-grid">
+  <a href="product-kids-flame.html" class="product-card">
+    <img src="images/kids-flame.png" alt="Kids Subliminal Flame" onerror="this.src='https://via.placeholder.com/300x400?text=Kids+Flame';">
+    <p class="product-name">Kids Subliminal Flame</p>
+    <p class="product-price">$100</p>
+  </a>
+  <a href="product-kids-tee-01.html" class="product-card">
+    <img src="images/kids-tee-01.png" alt="Kids Tee 01" onerror="this.src='https://via.placeholder.com/300x400?text=Kids+Tee+01';">
+    <p class="product-name">SUBLIMINAL KIDS TEE 01</p>
+    <p class="product-price">$60</p>
+  </a>
+  <a href="product-kids-hoodie-01.html" class="product-card">
+    <img src="images/kids-hoodie-01.png" alt="Kids Hoodie 01" onerror="this.src='https://via.placeholder.com/300x400?text=Kids+Hoodie+01';">
+    <p class="product-name">SUBLIMINAL KIDS HOODIE 01</p>
+    <p class="product-price">$85</p>
+  </a>
+    <a href="product-kids-subliminal-vol1.html" class="product-card">
+      <img src="images/shopimagessubliminal-leather.PNG" alt="Kids Subliminal Vol 1 Sweat Suite" onerror="this.src='https://via.placeholder.com/300x400?text=Subliminal+Vol+1';">
+      <p class="product-name">Kids Subliminal Vol 1 Sweat Suites</p>
+      <p class="product-price">$120</p>
+    </a>
+</section>
+<header class="shop-header">
+  <h1 class="chrome-hearts">KIDS</h1>
+</header>
+
+<section class="product-grid">
+
+  <div class="product-card">
+    <img src="../images/kids-hoodie1.png" alt="Subliminal Kids Hoodie">
+    <h3>Subliminal Kids Hoodie</h3>
+    <p>$65.00</p>
+    <button>Add to Cart</button>
+  </div>
+
+  <div class="product-card">
+    <img src="../images/kids-set1.png" alt="Subliminal Kids Set">
+    <h3>Subliminal Kids Set</h3>
+    <p>$95.00</p>
+    <button>Add to Cart</button>
+  </div>
+
+</section>
+</header>
+<div class="video-bg" style="z-index:-1;">
+  <video class="bg-video" autoplay muted loop playsinline style="z-index:-1;">
     <source src="/iStock-2253622537.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 </div>
-<header class="shop-header">
-  <h1 class="chrome-hearts">KIDS</h1>
-</header>
-<section class="product-grid">
-  <!-- Add kids' products here -->
-</section>
 <script src="script.js"></script>
 </body>
 </html>

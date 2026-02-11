@@ -1,0 +1,41 @@
+.product-page {
+	display: flex;
+	gap: 50px;
+	padding: 80px;
+}
+
+.product-page img {
+	width: 400px;
+	border-radius: 12px;
+}
+
+.buy-btn {
+	padding: 15px 40px;
+	background: black;
+	color: white;
+	border: 1px solid white;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.product-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 40px;
+	padding: 60px;
+}
+
+.product-card {
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+
+.product-card img {
+	width: 100%;
+	border-radius: 12px;
+}
+
+.product-card:hover {
+	opacity: 0.8;
+}
