@@ -1,3 +1,8 @@
+.product-grid img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1) drop-shadow(0 2px 8px #fff);
+    transition: transform 0.3s, filter 0.3s;
+}
 
 .product-grid {
     display: grid;
