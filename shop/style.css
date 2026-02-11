@@ -102,7 +102,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'ChromeGothic', serif;
+    font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif !important;
 }
 
 body {
