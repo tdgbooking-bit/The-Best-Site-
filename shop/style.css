@@ -1,3 +1,42 @@
+/* Product Card Flip Effect (Updated) */
+.product-card {
+    width: 100%;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+}
+
+.product-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Mobile Flip */
+.product-card.flip .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front img,
+.card-back img {
+    width: 100%;
+    display: block;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+}
 /* Product Card Flip Effect */
 .product-card {
     width: 100%;
