@@ -5,34 +5,33 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shop All | Subliminal</title>
 <link rel="stylesheet" href="../css/style.css">
+<!-- Chrome Hearts font import (UnifrakturCook as example) -->
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
 <style>
+body, h1, h2, h3, h4, h5, h6, .product, .shop-container, .product-name, .product-price, a, p, button {
+  font-family: 'UnifrakturCook', 'Cinzel', serif !important;
+}
 body {
   background: black;
   color: white;
-  font-family: Arial, sans-serif;
 }
-
 .shop-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
   padding: 60px;
 }
-
 .product {
   text-align: center;
 }
-
 .product img {
   width: 100%;
   height: auto;
   transition: 0.3s ease;
 }
-
 .product img:hover {
   transform: scale(1.05);
 }
-
 .product h3 {
   margin-top: 15px;
 }
@@ -54,13 +53,27 @@ body {
 
 
   <!-- KIDS PRODUCTS -->
-  <div class="product">
-    <a href="product-kids-flame.html">
-      <img src="images/frontofblueandpinkhoodie.png" alt="Front blue and pink hoodie">
+  <div class="product" style="position:relative;">
+    <a href="product-kids-flame.html" style="display:block;position:relative;">
+      <div style="position:relative;width:100%;height:auto;">
+        <img src="images/frontofblueandpinkhoodie.png" alt="Front blue and pink hoodie" style="width:100%;height:auto;display:block;transition:opacity 0.3s;position:absolute;top:0;left:0;z-index:1;" class="front-img">
+        <img src="images/backofblueandpinkset.png" alt="Back blue and pink set" style="width:100%;height:auto;display:block;transition:opacity 0.3s;position:absolute;top:0;left:0;z-index:2;opacity:0;" class="back-img">
+      </div>
     </a>
     <h3>Kids Subliminal Flame Sweat Suits</h3>
     <p>$100</p>
   </div>
+  .product img {
+    width: 100%;
+    height: auto;
+    transition: 0.3s ease;
+  }
+  .product:hover .front-img {
+    opacity: 0;
+  }
+  .product:hover .back-img {
+    opacity: 1;
+  }
   <div class="product">
     <a href="product-kids-tee-01.html">
       <img src="images/kids-tee-01.png" alt="Kids Tee 01" onerror="this.src='https://via.placeholder.com/300x400?text=Kids+Tee+01';">
