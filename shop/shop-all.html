@@ -4,100 +4,105 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shop All | Subliminal</title>
-<link rel="stylesheet" href="../css/style.css">
-<!-- Chrome Hearts font import (UnifrakturCook as example) -->
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+
 <style>
-body, h1, h2, h3, h4, h5, h6, .product, .shop-container, .product-name, .product-price, a, p, button {
-  font-family: 'UnifrakturCook', 'Cinzel', serif !important;
-}
 body {
+  margin: 0;
+  font-family: Arial, sans-serif;
   background: black;
   color: white;
+  overflow-x: hidden;
 }
-.shop-container {
+
+/* VIDEO BACKGROUND */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  font-size: 40px;
+  margin: 60px 0;
+  letter-spacing: 4px;
+}
+
+/* PRODUCT GRID */
+.shop-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
-  padding: 60px;
+  gap: 50px;
+  padding: 0 80px 100px 80px;
 }
+
+/* PRODUCT CARD */
 .product {
+  position: relative;
   text-align: center;
 }
+
 .product img {
   width: 100%;
-  height: auto;
-  transition: 0.3s ease;
+  max-width: 350px;
+  transition: 0.4s ease;
 }
-.product img:hover {
-  transform: scale(1.05);
+
+/* HOVER FLIP EFFECT */
+.product img.back {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
 }
-.product h3 {
-  margin-top: 15px;
+
+.product:hover img.front {
+  opacity: 0;
+}
+
+.product:hover img.back {
+  opacity: 1;
+}
+
+.product-name {
+  margin-top: 20px;
+  letter-spacing: 2px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="video-bg" style="z-index:-1; position:fixed; top:0; left:0; width:100vw; height:100vh; overflow:hidden;">
-  <video class="bg-video" autoplay muted loop playsinline style="width:100vw;height:100vh;object-fit:cover;min-width:100vw;min-height:100vh;position:absolute;top:0;left:0;z-index:-1;">
-    <source src="../assets/iStock-2253622537.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<!-- MP4 BACKGROUND -->
+<video autoplay muted loop playsinline class="video-bg">
+  <source src="videos/background.mp4" type="video/mp4">
+</video>
+
+<h1 class="page-title">SHOP ALL</h1>
+
+<div class="shop-grid">
+
+  <!-- PRODUCT 1 -->
+  <div class="product">
+    <a href="product1.html">
+      <img src="images/front1.png" class="front">
+      <img src="images/back1.png" class="back">
+    </a>
+    <div class="product-name">SUBLIMINAL FLAME SET</div>
+  </div>
+
+  <!-- COPY THIS BLOCK FOR MORE PRODUCTS -->
+
 </div>
 
-<h1 style="text-align:center; margin-top:40px; position:relative; z-index:2;">SHOP ALL</h1>
-
-<div class="shop-container" style="position:relative; z-index:2;">
-
-
-  <!-- KIDS PRODUCTS -->
-  <div class="product" style="position:relative;">
-    <div style="position:relative;width:100%;height:auto;">
-      <img src="images/frontofblueandpinkhoodie.png" alt="Front blue and pink hoodie" style="width:100%;height:auto;display:block;transition:opacity 0.3s;position:absolute;top:0;left:0;z-index:1;" class="front-img">
-      <img src="images/backofblueandpinkset.png" alt="Back blue and pink set" style="width:100%;height:auto;display:block;transition:opacity 0.3s;position:absolute;top:0;left:0;z-index:2;opacity:0;" class="back-img">
-    </div>
-    <h3>Kids Subliminal Flame Sweat Suits</h3>
-    <p>$100</p>
-  </div>
-  .product img {
-    width: 100%;
-    height: auto;
-    transition: 0.3s ease;
-  }
-  .product:hover .front-img {
-    opacity: 0;
-  }
-  .product:hover .back-img {
-    opacity: 1;
-  }
-  <div class="product">
-    <img src="images/kids-tee-01.png" alt="Kids Tee 01" onerror="this.src='https://via.placeholder.com/300x400?text=Kids+Tee+01';">
-    <h3>SUBLIMINAL KIDS TEE 01</h3>
-    <p>$60</p>
-  </div>
-  <div class="product">
-    <img src="images/kids-hoodie-01.png" alt="Kids Hoodie 01" onerror="this.src='https://via.placeholder.com/300x400?text=Kids+Hoodie+01';">
-    <h3>SUBLIMINAL KIDS HOODIE 01</h3>
-    <p>$85</p>
-  </div>
-  <div class="product">
-    <img src="images/Image New Jacket.png.png" alt="Kids Subliminal Vol 1 Sweat Suite" onerror="this.src='https://via.placeholder.com/300x400?text=Subliminal+Vol+1';">
-    <h3>Kids Subliminal Vol 1 Sweat Suites</h3>
-    <p>$120</p>
-  </div>
-
-  <!-- MEN PRODUCTS -->
-  <div class="product">
-    <img src="images/mens-tee-01.png" alt="SUBLIMINAL TEE 01">
-    <h3>SUBLIMINAL TEE 01</h3>
-    <p>$85</p>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/300x400?text=Mens+Tee+02" alt="SUBLIMINAL TEE 02">
-    <h3>SUBLIMINAL TEE 02</h3>
-    <p>$90</p>
+</body>
+</html>
   </div>
   <div class="product">
     <img src="https://via.placeholder.com/300x400?text=Mens+Hoodie+01" alt="SUBLIMINAL HOODIE 01">
