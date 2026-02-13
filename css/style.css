@@ -1,0 +1,35 @@
+/* Add your site CSS here */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  padding: 40px 0;
+}
+.product-card {
+  background: #222;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  padding: 24px;
+  text-align: center;
+  width: 260px;
+}
+.product-card img {
+  width: 100%;
+  max-width: 220px;
+  border-radius: 6px;
+}
+.product-card h2 {
+  margin: 18px 0 8px 0;
+  font-size: 1.3em;
+}
+.product-card p {
+  font-size: 1.1em;
+  color: #ccc;
+}
