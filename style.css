@@ -1,0 +1,71 @@
+body {
+	margin: 0;
+	font-family: 'Segoe UI', Arial, sans-serif;
+	background: #f7f7f7;
+	color: #222;
+	min-height: 100vh;
+	position: relative;
+}
+header {
+	background: #111;
+	padding: 1rem 0;
+}
+nav {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+.nav a, nav a {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.2s, background 0.2s, box-shadow 0.2s;
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
+}
+.nav a:hover, nav a:hover {
+	color: #fff;
+	background: #ff4c60;
+	box-shadow: 0 2px 8px rgba(255,76,96,0.2);
+}
+#bg-video {
+	position: fixed;
+	top: 0;
+	left: 0;
+	min-width: 100vw;
+	min-height: 100vh;
+	width: auto;
+	height: auto;
+	z-index: -1;
+	object-fit: cover;
+	opacity: 0.25;
+	pointer-events: none;
+}
+.hero {
+	text-align: center;
+	padding: 5rem 1rem 3rem 1rem;
+	background: linear-gradient(120deg, #ff4c60 0%, #6c63ff 100%);
+	color: #fff;
+}
+.cta {
+	display: inline-block;
+	margin-top: 2rem;
+	padding: 0.75rem 2rem;
+	background: #fff;
+	color: #ff4c60;
+	border-radius: 2rem;
+	font-weight: bold;
+	text-decoration: none;
+	transition: background 0.2s, color 0.2s;
+}
+.cta:hover {
+	background: #ff4c60;
+	color: #fff;
+}
+footer {
+	text-align: center;
+	padding: 2rem 0 1rem 0;
+	background: #111;
+	color: #fff;
+	margin-top: 3rem;
+}

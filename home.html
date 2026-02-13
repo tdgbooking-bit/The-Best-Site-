@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HOME — SUBLIMINAL WORLD</title>
+  <link rel="stylesheet" href="shop/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="cursor-glow"></div>
+<div class="hero-bg">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="iStock-2253622537.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<div class="hero-text" id="hero-text">
+  <h1 class="hero-title">SUBLIMINAL WORLD</h1>
+  <p class="hero-sub">Designed beyond the obvious.</p>
+</div>
+<script>
+const filterLinks = document.querySelectorAll(".shop-nav a");
+const products = document.querySelectorAll(".product");
+
+filterLinks.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault();
+    const filter = link.dataset.filter;
+    products.forEach(product => {
+      if (filter === "all" || product.dataset.category === filter) {
+        product.classList.remove("hidden");
+      } else {
+        product.classList.add("hidden");
+      }
+    });
+  });
+});
+</script>
+<style>
+      /* Cursor Glow Effect */
+      #cursor-glow {
+        position: fixed;
+        pointer-events: none;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.04) 80%, transparent 100%);
+        box-shadow: 0 0 32px 12px rgba(255,255,255,0.18);
+        z-index: 9999;
+        mix-blend-mode: lighten;
+        opacity: 0.7;
+        transition: transform 0.18s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.2s;
+      }
+      body.fade-transition {
+        opacity: 0;
+        transition: opacity 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      }
+    <script>
+    // Cursor Glow Effect
+    document.addEventListener('mousemove', function(e) {
+      const glow = document.getElementById('cursor-glow');
+      glow.style.left = (e.clientX - 24) + 'px';
+      glow.style.top = (e.clientY - 24) + 'px';
+    });
+
+    // Fade transitions on scroll
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', function() {
+      document.body.classList.add('fade-transition');
+      setTimeout(() => {
+        document.body.classList.remove('fade-transition');
+      }, 400);
+    });
+    </script>
+    .hero-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .hero-video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      min-width: 100vw;
+      min-height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      filter: brightness(0.92) contrast(1.08) saturate(1.1);
+      /* Slow-motion effect: use a slow video or adjust playbackRate in JS */
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      opacity: 0;
+      transition: opacity 1.2s ease;
+      z-index: 2;
+    }
+    .hero-title {
+      font-size: 4.5em;
+      font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
+      letter-spacing: 8px;
+      color: #fff;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.22), 0 0 4px #fff;
+      margin-bottom: 0.5em;
+    }
+    .hero-sub {
+      font-size: 2.2em;
+      font-family: 'Cinzel', 'Playfair Display', serif;
+      color: #fff;
+      letter-spacing: 3px;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.18);
+      margin-bottom: 2em;
+    }
+  <script>
+  // Fade in hero text after 5 seconds
+  window.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      document.getElementById('hero-text').style.opacity = 1;
+    }, 5000);
+  });
+  </script>
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: transparent;
+  }
+  .video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+  }
+  .video-bg video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .home-title {
+    font-size: 4.2em;
+    font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
+    letter-spacing: 8px;
+    margin-bottom: 0.7em;
+    text-align: center;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.22), 0 0 4px #fff;
+  }
+  .welcome-main {
+    font-size: 3.8em;
+    font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
+    letter-spacing: 6px;
+    margin-bottom: 0.5em;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.18), 0 0 3px #fff;
+  }
+  .welcome-sub {
+    font-size: 2.1em;
+    font-family: 'Cinzel', 'Playfair Display', serif;
+    letter-spacing: 3px;
+    margin-bottom: 2.5em;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.18);
+  }
+
+  .shop-nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+
+  .shop-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: "Times New Roman", serif;
+    font-size: clamp(22px, 4vw, 44px);
+    letter-spacing: 4px;
+    opacity: 0.85;
+  }
+
+  .shop-nav a:hover {
+    opacity: 1;
+  }
+</style>
+</body>
+</body>
+<footer class="gallery-footer">
+  <nav style="display:flex;justify-content:center;gap:48px;padding:48px 0;background:transparent;">
+    <a href="/home.html" class="footer-link">HOME</a>
+    <a href="/shop/men.html" class="footer-link">MENS</a>
+    <a href="/shop/women.html" class="footer-link">WOMENS</a>
+    <a href="/shop/kids.html" class="footer-link">KIDS</a>
+  </nav>
+</footer>
+<style>
+  .gallery-footer {
+    background: transparent;
+    border-top: 1px solid #222;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  .footer-link {
+    font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
+    font-size: 1.4em;
+    color: #fff;
+    letter-spacing: 6px;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+  }
+  .footer-link:hover {
+    opacity: 1;
+    color: #ccc;
+  }
+</style>
+</html>
