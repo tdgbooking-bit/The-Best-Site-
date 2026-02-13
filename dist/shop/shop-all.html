@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All | Subliminal</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* VIDEO BACKGROUND */
+.video-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  font-size: 40px;
+  margin: 60px 0;
+  letter-spacing: 4px;
+}
+
+/* PRODUCT GRID */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px;
+  padding: 0 80px 100px 80px;
+}
+
+/* PRODUCT CARD */
+.product {
+  position: relative;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  max-width: 350px;
+  transition: 0.4s ease;
+}
+
+/* HOVER FLIP EFFECT */
+.product img.back {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.product:hover img.front {
+  opacity: 0;
+}
+
+.product:hover img.back {
+  opacity: 1;
+}
+
+.product-name {
+  margin-top: 20px;
+  letter-spacing: 2px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MP4 BACKGROUND -->
+<video autoplay muted loop playsinline class="video-bg">
+  <source src="videos/background.mp4" type="video/mp4">
+</video>
+
+<h1 class="page-title">SHOP ALL</h1>
+
+<div class="shop-grid">
+
+  <!-- PRODUCT 1 -->
+  <div class="product">
+    <a href="product1.html">
+      <img src="images/front1.png" class="front">
+      <img src="images/back1.png" class="back">
+    </a>
+    <div class="product-name">SUBLIMINAL FLAME SET</div>
+  </div>
+
+  <!-- COPY THIS BLOCK FOR MORE PRODUCTS -->
+
+</div>
+
+</body>
+</html>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/300x400?text=Mens+Hoodie+01" alt="SUBLIMINAL HOODIE 01">
+    <h3>SUBLIMINAL HOODIE 01</h3>
+    <p>$120</p>
+  </div>
+  <div class="product">
+    <img src="images/Subliminal Flame Kids Sweat Suit.png.PNG" alt="Subliminal Leather Jacket">
+    <h3>LEATHER JACKET</h3>
+    <p>$300</p>
+  </div>
+
+  <!-- WOMEN PRODUCTS -->
+  <div class="product">
+    <img src="https://via.placeholder.com/300x400?text=Women+Hoodie+01" alt="SUBLIMINAL WOMEN'S HOODIE 01">
+    <h3>SUBLIMINAL WOMEN'S HOODIE 01</h3>
+    <p>$110</p>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/300x400?text=Women+Tee+01" alt="SUBLIMINAL WOMEN'S TEE 01">
+    <h3>SUBLIMINAL WOMEN'S TEE 01</h3>
+    <p>$80</p>
+  </div>
+
+</div>
+
+</body>
+</html>
