@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop All | Subliminal</title>
+<link rel="stylesheet" href="../css/style.css">
+<style>
+body {
+  background: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.shop-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 60px;
+}
+
+.product {
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  transition: 0.3s ease;
+}
+
+.product img:hover {
+  transform: scale(1.05);
+}
+
+.product h3 {
+  margin-top: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1 style="text-align:center; margin-top:40px;">SHOP ALL</h1>
+
+<div class="shop-container">
+
+  <!-- PRODUCT 1 -->
+  <div class="product">
+    <a href="../products/product-kids-flame.html">
+      <img src="../images/subliminal-flame-kids-sweatsuit.png" alt="Flame Sweat Suit">
+    </a>
+    <h3>Flame Sweat Suit</h3>
+  </div>
+
+  <!-- PRODUCT 2 -->
+  <div class="product">
+    <a href="../products/product-tee.html">
+      <img src="../images/black-tee.png" alt="Black Tee">
+    </a>
+    <h3>Black Subliminal Tee</h3>
+  </div>
+
+  <!-- ADD MORE PRODUCTS BELOW -->
+
+</div>
+
+</body>
+</html>
