@@ -1,61 +1,57 @@
-/* Add your site CSS here */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: black;
-  color: white;
-}
-.products {
+/* SHOP ALL PAGE NEW STYLES */
+.shop-all {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-  justify-content: center;
-  padding: 40px 0;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Helvetica, Arial, sans-serif;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 120px;
 }
 
-body {
-  background: black;
-  color: white;
-  overflow-x: hidden;
+.shop-all h1 {
+  font-size: 42px;
+  letter-spacing: 4px;
+  margin-bottom: 80px;
 }
 
-/* VIDEO BACKGROUND */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Helvetica, Arial, sans-serif;
+.products {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
 }
 
-body, html{
-height:100%;
-background:black;
-color:white;
-overflow:hidden;
+.products img {
+  width: 350px;
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
+/* SHOP ALL PAGE STYLES */
+.shop-all {
+  text-align: center;
+  padding-top: 120px;
 }
 
-.video-container video{
-position:fixed;
-width:100%;
-height:100%;
-object-fit:cover;
+.shop-title {
+  font-size: 40px;
+  letter-spacing: 4px;
+  margin-bottom: 60px;
 }
 
-.overlay{
-position:fixed;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.65);
+.product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
 }
 
-.content{
-position:relative;
+.product-item img {
+  width: 350px;
+  max-width: 90%;
+  height: auto;
+  display: block;
+}
 z-index:2;
 height:100vh;
 display:flex;
@@ -63,113 +59,94 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 gap:20px;
-}
-
-  padding: 12px;
-font-size:60px;
-letter-spacing:8px;
-}
-
-form{
 display:flex;
 flex-direction:column;
 gap:15px;
 width:280px;
-}
-
-input{
-background:transparent;
 border:none;
 border-bottom:1px solid white;
 padding:10px;
 color:white;
 outline:none;
-}
-
-button{
-background:white;
-color:black;
-border:none;
-padding:12px;
 cursor:pointer;
-font-weight:bold;
-}
-  border: none;
-  outline: none;
-  width: 220px;
-}
-
-.signup button {
-  padding: 12px 20px;
-  border: none;
-  background: white;
-  color: black;
-  font-weight: bold;
-  cursor: pointer;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.shop-btn {
-  margin-top: 20px;
-  text-decoration: none;
+body {
+  background: #000; /* remove if you have video bg */
   color: white;
-  border-bottom: 1px solid white;
-  padding-bottom: 4px;
+  font-family: Arial, sans-serif;
 }
 
-/* Hamburger */
-.hamburger {
-  position: fixed;
-  top: 25px;
-  left: 25px;
-  z-index: 3;
-  cursor: pointer;
-}
-
-.hamburger span {
-  display: block;
-  width: 25px;
-  height: 2px;
-  background: white;
-  margin: 6px 0;
-}
-
-/* Side Menu */
-.side-menu {
+/* Background Video */
+.bg-video {
   position: fixed;
   top: 0;
-  left: -250px;
-  width: 250px;
+  left: 0;
+  width: 100%;
   height: 100%;
-  background: black;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Shop Layout */
+.shop-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 60px;
+  padding: 120px 0;
+  text-align: center;
+}
+
+/* Product Flip Card */
+.product-card {
+  perspective: 1000px;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
-  transition: 0.4s;
-  z-index: 2;
+  align-items: center;
+  justify-content: center;
 }
 
-.side-menu a {
-  color: white;
-  text-decoration: none;
-  padding: 20px;
-  letter-spacing: 2px;
+.product-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.side-menu.active {
-  left: 0;
+.product-card:hover .product-inner {
+  transform: rotateY(180deg);
 }
 
-/* Mobile */
-@media(max-width:768px){
-  .content h1{
-    font-size: 35px;
-  }
+.product-front,
+.product-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+}
 
-  .signup {
-    flex-direction: column;
-  }
+.product-back {
+  transform: rotateY(180deg);
+}
 
-  .signup input {
-    width: 100%;
+/* Image Styling (NO BOXES) */
+.product-front img,
+.product-back img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Mobile Tap Flip */
+@media (hover: none) {
+  .product-card:active .product-inner {
+    transform: rotateY(180deg);
   }
 }

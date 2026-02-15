@@ -15,7 +15,7 @@
 </head>
 <body>
 <video autoplay muted loop playsinline class="video-bg">
-  <source src="videos/background.mp4" type="video/mp4">
+  <source src="../iStock-2253622537.mp4" type="video/mp4">
 </video>
   <div class="video-bg" style="z-index:-1; position:fixed; top:0; left:0; width:100vw; height:100vh; overflow:hidden;">
     <video class="bg-video" autoplay muted loop playsinline style="width:100vw;height:100vh;object-fit:cover;min-width:100vw;min-height:100vh;position:absolute;top:0;left:0;z-index:-1;">
@@ -53,9 +53,13 @@
     document.getElementById('profile-email').innerText = email ? 'Email: ' + email : 'Not logged in.';
     document.getElementById('profile-points').innerText = 'Points: ' + points;
     const ordersList = document.getElementById('orders-list');
-    orders.forEach(orderId => {
+    orders.forEach(order => {
       const li = document.createElement('li');
-      li.innerText = orderId;
+      let items = '';
+      if(order.items && order.items.length > 0){
+        items = order.items.map(i => `${i.name} ($${i.price})`).join(', ');
+      }
+      li.innerHTML = `<b>Date:</b> ${order.date || ''}<br><b>Items:</b> ${items}<br><b>Phone:</b> ${order.phone || ''}`;
       ordersList.appendChild(li);
     });
     document.getElementById('logout-btn').onclick = function() {

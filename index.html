@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subliminal</title>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
   <style>
     html, body {
       height: 100%;
@@ -11,6 +12,7 @@
       padding: 0;
       overflow: hidden;
       background: black;
+      font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
     }
     .video-bg {
       position: fixed;
@@ -25,7 +27,49 @@
 </head>
 <body>
   <video class="video-bg" autoplay muted loop playsinline>
-    <source src="images/background.mp4" type="video/mp4">
+    <source src="iStock-2253622537.mp4" type="video/mp4">
   </video>
+  <a href="shop-all.html" class="enter-btn">ENTER</a>
+  <style>
+    .enter-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.8);
+      font-size: 4em;
+      color: #fff;
+      background: none;
+      border: none;
+      border-radius: 0;
+      padding: 0.5em 2em;
+      text-decoration: none;
+      letter-spacing: 8px;
+      font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
+      box-shadow: none;
+      transition: color 0.2s, background 0.2s, border 0.2s, transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+      z-index: 10;
+      opacity: 0;
+      animation: popUp 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s forwards;
+    }
+    @keyframes popUp {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+      }
+      80% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.08);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+    .enter-btn:hover {
+      color: #ff4c60;
+      background: none;
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+  </style>
 </body>
 </html>
