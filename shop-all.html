@@ -1,572 +1,39 @@
-<!-- PRODUCT TEMPLATE: ADD YOUR OWN -->
-<div class="product">
-  <div class="flip-container">
-    <div class="flipper">
-      <div class="front">
-        <img src="images/your-product-front.png" alt="Your Product Front" class="product-image">
-      </div>
-      <div class="back">
-        <img src="images/your-product-back.png" alt="Your Product Back" class="product-image">
-      </div>
-    </div>
-  </div>
-  <div class="product-name">YOUR PRODUCT NAME</div>
-  <div class="product-price" id="yourprod-price">$0</div>
-  <label for="yourprod-size" style="color:#fff; font-size:13px; margin-top:8px;">Size:</label>
-  <select id="yourprod-size" onchange="updateYourProdPrice()" style="margin-bottom:10px;">
-    <option value="S">S</option>
-    <option value="M">M</option>
-    <option value="L">L</option>
-    <option value="XL">XL (+$0)</option>
-    <option value="XXL">XXL (+$0)</option>
-  </select>
-  <button class="add-btn" onclick="addYourProdToCart()">ADD TO CART</button>
-  <button class="add-btn" style="margin-top:10px; background:#fff; color:#111;" onclick="openQuickViewYourProd()">QUICK VIEW</button>
-</div>
-<script>
-// Template product logic (customize as needed)
-const yourProdBasePrice = 0;
-function updateYourProdPrice() {
-  const size = document.getElementById('yourprod-size').value;
-  let price = yourProdBasePrice;
-  if (size === 'XL') price += 0;
-  if (size === 'XXL') price += 0;
-  document.getElementById('yourprod-price').innerText = `$${price}`;
-}
-function addYourProdToCart() {
-  const size = document.getElementById('yourprod-size').value;
-  let price = yourProdBasePrice;
-  if (size === 'XL') price += 0;
-  if (size === 'XXL') price += 0;
-  addToCart(`YOUR PRODUCT NAME (${size})`, price);
-}
-function openQuickViewYourProd() {
-  const size = document.getElementById('yourprod-size').value;
-  let price = yourProdBasePrice;
-  if (size === 'XL') price += 0;
-  if (size === 'XXL') price += 0;
-  openQuickView('images/your-product-front.png', `YOUR PRODUCT NAME (${size})`, `$${price}`, `Your product description. Size: ${size}`);
-}
-updateYourProdPrice();
-</script>
-<!-- PRODUCT 9: GOLDEN LUX HOODIE WITH SIZES -->
-<div class="product">
-  <div class="flip-container">
-    <div class="flipper">
-      <div class="front">
-        <img src="images/golden-lux-hoodie-front.png" alt="Golden Lux Hoodie Front" class="product-image">
-      </div>
-      <div class="back">
-        <img src="images/golden-lux-hoodie-back.png" alt="Golden Lux Hoodie Back" class="product-image">
-      </div>
-    </div>
-  </div>
-  <div class="product-name">GOLDEN LUX HOODIE</div>
-  <div class="product-price" id="glh-price">$140</div>
-  <label for="glh-size" style="color:#fff; font-size:13px; margin-top:8px;">Size:</label>
-  <select id="glh-size" onchange="updateGLHPrice()" style="margin-bottom:10px;">
-    <option value="S">S</option>
-    <option value="M">M</option>
-    <option value="L">L</option>
-    <option value="XL">XL (+$10)</option>
-    <option value="XXL">XXL (+$20)</option>
-  </select>
-  <button class="add-btn" onclick="addGLHToCart()">ADD TO CART</button>
-  <button class="add-btn" style="margin-top:10px; background:#fff; color:#111;" onclick="openQuickViewGLH()">QUICK VIEW</button>
-</div>
-<script>
-// Golden Lux Hoodie size/price logic
-const glhBasePrice = 140;
-function updateGLHPrice() {
-  const size = document.getElementById('glh-size').value;
-  let price = glhBasePrice;
-  if (size === 'XL') price += 10;
-  if (size === 'XXL') price += 20;
-  document.getElementById('glh-price').innerText = `$${price}`;
-}
-function addGLHToCart() {
-  const size = document.getElementById('glh-size').value;
-  let price = glhBasePrice;
-  if (size === 'XL') price += 10;
-  if (size === 'XXL') price += 20;
-  addToCart(`Golden Lux Hoodie (${size})`, price);
-}
-function openQuickViewGLH() {
-  const size = document.getElementById('glh-size').value;
-  let price = glhBasePrice;
-  if (size === 'XL') price += 10;
-  if (size === 'XXL') price += 20;
-  openQuickView('images/golden-lux-hoodie-front.png', `GOLDEN LUX HOODIE (${size})`, `$${price}`, `Golden Lux Hoodie, premium gold. Size: ${size}`);
-}
-updateGLHPrice();
-</script>
-<!-- PRODUCT 8: RED FLAME HOODIE WITH SIZES -->
-<div class="product">
-  <div class="flip-container">
-    <div class="flipper">
-      <div class="front">
-        <img src="images/red-flame-hoodie-front.png" alt="Red Flame Hoodie Front" class="product-image">
-      </div>
-      <div class="back">
-        <img src="images/red-flame-hoodie-back.png" alt="Red Flame Hoodie Back" class="product-image">
-      </div>
-    </div>
-  </div>
-  <div class="product-name">RED FLAME HOODIE</div>
-  <div class="product-price" id="rfh-price">$110</div>
-  <label for="rfh-size" style="color:#fff; font-size:13px; margin-top:8px;">Size:</label>
-  <select id="rfh-size" onchange="updateRFHPrice()" style="margin-bottom:10px;">
-    <option value="S">S</option>
-    <option value="M">M</option>
-    <option value="L">L</option>
-    <option value="XL">XL (+$10)</option>
-    <option value="XXL">XXL (+$20)</option>
-  </select>
-  <button class="add-btn" onclick="addRFHToCart()">ADD TO CART</button>
-  <button class="add-btn" style="margin-top:10px; background:#fff; color:#111;" onclick="openQuickViewRFH()">QUICK VIEW</button>
-</div>
-<script>
-// Red Flame Hoodie size/price logic
-const rfhBasePrice = 110;
-function updateRFHPrice() {
-  const size = document.getElementById('rfh-size').value;
-  let price = rfhBasePrice;
-  if (size === 'XL') price += 10;
-  if (size === 'XXL') price += 20;
-  document.getElementById('rfh-price').innerText = `$${price}`;
-}
-function addRFHToCart() {
-  const size = document.getElementById('rfh-size').value;
-  let price = rfhBasePrice;
-  if (size === 'XL') price += 10;
-  if (size === 'XXL') price += 20;
-  addToCart(`Red Flame Hoodie (${size})`, price);
-}
-function openQuickViewRFH() {
-  const size = document.getElementById('rfh-size').value;
-  let price = rfhBasePrice;
-  if (size === 'XL') price += 10;
-  if (size === 'XXL') price += 20;
-  openQuickView('images/red-flame-hoodie-front.png', `RED FLAME HOODIE (${size})`, `$${price}`, `Red Flame Hoodie, bold and stylish. Size: ${size}`);
-}
-updateRFHPrice();
-</script>
-<!-- PRODUCT 8: RED FLAME HOODIE -->
-<div class="product">
-  <div class="flip-container">
-    <div class="flipper">
-      <div class="front">
-        <img src="images/red-flame-hoodie-front.png" alt="Red Flame Hoodie Front" class="product-image">
-      </div>
-      <div class="back">
-        <img src="images/red-flame-hoodie-back.png" alt="Red Flame Hoodie Back" class="product-image">
-      </div>
-    </div>
-  </div>
-  <div class="product-name">RED FLAME HOODIE</div>
-  <div class="product-price">$110</div>
-  <button class="add-btn" onclick="addToCart('Red Flame Hoodie',110)">ADD TO CART</button>
-  <button class="add-btn" style="margin-top:10px; background:#fff; color:#111;" onclick="openQuickView('images/red-flame-hoodie-front.png','RED FLAME HOODIE','$110','Red Flame Hoodie, bold and stylish.')">QUICK VIEW</button>
-</div>
 *{
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Subliminal | Shop All</title>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-<style>
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
-}
-
-body{
-  color:white;
-  overflow-x:hidden;
-  scroll-behavior:smooth;
-}
-
-/* ================= BACKGROUND VIDEO ================= */
-.bg-video{
-  position:fixed;
-  top:0;
-  left:0;
-/* Remove border from product images */
-.product-image {
-  border: none !important;
-}
-  z-index:-2;
-}
-
-.overlay{
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-  z-index:-1;
-}
-
-/* ================= NAVIGATION ================= */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  padding:25px 8%;
-  display:flex;
-  align-items:center;
-  z-index:10;
-}
-
-.logo{
-  font-size:18px;
-  letter-spacing:4px;
-}
-
-.nav-links{
-  display:flex;
-  gap:40px;
-}
-
-.nav-links a{
-  color:white;
-  text-decoration:none;
-  font-size:13px;
-  letter-spacing:2px;
-  position:relative;
-}
-
-.nav-links a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  bottom:-6px;
-  width:0;
-  height:1px;
-  background:white;
-  transition:0.4s ease;
-}
-
-.nav-links a:hover::after{
-  width:100%;
-}
-
-/* ================= HEADER ================= */
-.header{
-  margin-top:140px;
-  text-align:center;
-  font-size:26px;
-  letter-spacing:6px;
-  opacity:0;
-  animation:fadeIn 1.2s ease forwards;
-}
-
-@keyframes fadeIn{
-  to{opacity:1;}
-}
-
-/* ================= PRODUCTS GRID ================= */
-.products{
-  margin-top:60px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,300px));
-  justify-content:center;
-  gap:70px;
-  padding-bottom:100px;
-  position: relative;
-  z-index: 2;
-}
-
-.product{
-  text-align:center;
-  opacity:0;
-  transform:translateY(40px);
-  transition:0.6s ease;
-  position:relative;
-  z-index:1;
-  padding-bottom:32px;
-  box-sizing:border-box;
-  min-height:540px;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
-  background:none !important;
-  border:none !important;
-  box-shadow:none !important;
-}
-
-.product.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* ================= FLIP EFFECT ================= */
-.flip-container{
-  perspective:1000px;
-}
-
-
-.flipper {
-  position: relative;
-  width: 100%;
-  max-width: 320px;
-  height: 420px;
-  margin: auto;
-  transition: 0.6s;
-  transform-style: preserve-3d;
-}
-
-.front, .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
-}
-
-.flip-container:hover .flipper {
-  transform: rotateY(180deg);
-}
-
-.back {
-  transform: rotateY(180deg);
-}
-
-.product img{
-  width:100%;
-  max-height:320px;
-  height:auto;
-  display:block;
-  margin:0 auto 24px auto;
-  object-fit:contain;
-  position:relative;
-  z-index:1;
-}
-
-/* ================= PRODUCT TEXT ================= */
-.product-name{
-  margin-top:0;
-  margin-bottom:8px;
-  font-size:22px;
-  letter-spacing:3px;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.product-price{
-  margin-top:8px;
-  font-size:12px;
-  opacity:0.7;
-}
-
-.add-btn{
-  margin-top:30px;
-  padding:8px 20px;
-  border:1px solid white;
-  background:transparent;
-  color:white;
-  cursor:pointer;
-  letter-spacing:2px;
-  font-size:11px;
-  transition:0.3s ease;
-}
-
-.add-btn:hover{
-  background:white;
-  color:black;
-}
-
-/* ================= MOBILE ================= */
-@media(max-width: 900px) {
-  .products {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 18px;
-    padding: 0 2% 40px;
-  }
-  .product {
-    min-height: 320px;
-    padding-bottom: 12px;
-    background:none !important;
-    border:none !important;
-    box-shadow:none !important;
-  }
-  .flipper {
-    max-width: 160px;
-    height: 180px;
-  }
-  .product img {
-    max-height: 110px;
-    margin-bottom: 10px;
-  }
-  .product-name {
-    font-size: 13px;
-    margin-bottom: 2px;
-  }
-  .product-price {
-    font-size: 10px;
-  }
-  .add-btn {
-    padding: 6px 10px;
-    font-size: 10px;
-    margin-top: 10px;
-  }
-  #cart-modal > div, #phone-modal > div, #quickview-modal > div {
-    width: 95vw !important;
-    padding: 18px 6px 12px 6px !important;
-    font-size: 14px !important;
-  }
-  #cart-modal button, #phone-modal button, #quickview-modal button {
-    font-size: 13px !important;
-    padding: 8px 0 !important;
-  }
-  select {
-    font-size: 13px !important;
-  }
-}
-
-@media(max-width: 600px) {
-  .header {
-    font-size: 15px;
-    margin-top: 70px;
-    letter-spacing: 2px;
-  }
-  .products {
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 0 1% 20px;
-  }
-  .product {
-    min-height: 220px;
-    padding-bottom: 6px;
-  }
-  .flipper {
-    max-width: 110px;
-    height: 120px;
-  }
-  .product img {
-    max-height: 70px;
-    margin-bottom: 6px;
-  }
-  .product-name {
-    font-size: 10px;
-    margin-bottom: 1px;
-  }
-  .product-price {
-    font-size: 8px;
-  }
-  .add-btn {
-    padding: 5px 7px;
-    font-size: 8px;
-    margin-top: 6px;
-  }
-  nav {
-    padding: 10px 2%;
-  }
-  .logo {
-    font-size: 10px;
-    letter-spacing: 1px;
-  }
-  #cart-modal > div, #phone-modal > div, #quickview-modal > div {
-    width: 99vw !important;
-    padding: 8px 2px 6px 2px !important;
-    font-size: 11px !important;
-  }
-  #cart-modal button, #phone-modal button, #quickview-modal button {
-    font-size: 10px !important;
-    padding: 6px 0 !important;
-  }
-  select {
-    font-size: 10px !important;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <title>SHOP ALL — SUBLIMINAL WORLD</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <meta name="description" content="Shop all products at Subliminal World. Premium tees, hoodies, and more.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-
-
 <body>
-<!-- Cart Modal -->
-<div id="cart-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
-  <div style="background:#111; color:#fff; border-radius:12px; max-width:95vw; width:350px; margin:auto; padding:28px 18px 18px 18px; position:relative; box-shadow:0 8px 32px #000a;">
-    <button onclick="closeCartModal()" style="position:absolute; top:10px; right:16px; background:none; border:none; color:#fff; font-size:20px; cursor:pointer;">&times;</button>
-    <h2 style="font-size:20px; margin-bottom:12px; letter-spacing:2px;">Your Cart</h2>
-    <div id="cart-items"></div>
-    <div id="cart-total" style="margin:12px 0 18px 0; font-size:15px;"></div>
-    <button id="checkout-btn" onclick="openPhoneModal()" style="width:100%; padding:10px 0; background:#fff; color:#111; border:none; border-radius:6px; font-size:15px; font-weight:bold; cursor:pointer;">Checkout</button>
-    <button id="stripe-btn" onclick="payWithStripe()" style="width:100%; margin-top:10px; padding:10px 0; background:#635bff; color:#fff; border:none; border-radius:6px; font-size:15px; font-weight:bold; cursor:pointer;">Pay with Card</button>
-  // Stripe Checkout integration
-  function payWithStripe() {
-    if (!cart.length) {
-      alert('Your cart is empty.');
-      return;
-    }
-    fetch('http://localhost:4242/create-checkout-session', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ cart })
-    })
-      .then(res => res.json())
-      .then(data => {
-        if (data.id) {
-          window.location = `https://checkout.stripe.com/pay/${data.id}`;
-        } else {
-          alert('Stripe error: ' + (data.error || 'Unknown error'));
-        }
-      })
-      .catch(err => alert('Stripe error: ' + err.message));
-  }
-  </div>
-</div>
-
-<!-- Phone Number Modal -->
-<div id="phone-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:1100; align-items:center; justify-content:center;">
-  <div style="background:#111; color:#fff; border-radius:12px; max-width:95vw; width:350px; margin:auto; padding:28px 18px 18px 18px; position:relative; box-shadow:0 8px 32px #000a;">
-    <button onclick="closePhoneModal()" style="position:absolute; top:10px; right:16px; background:none; border:none; color:#fff; font-size:20px; cursor:pointer;">&times;</button>
-    <h2 style="font-size:18px; margin-bottom:12px; letter-spacing:2px;">Enter Your Number</h2>
-    <input id="phone-input" type="tel" placeholder="Phone Number" style="width:100%; padding:8px; border-radius:5px; border:1px solid #444; margin-bottom:14px; font-size:15px;">
-    <button onclick="processCheckout()" style="width:100%; padding:10px 0; background:#fff; color:#111; border:none; border-radius:6px; font-size:15px; font-weight:bold; cursor:pointer;">Submit</button>
-  </div>
-</div>
-
-<!-- Background Video -->
-<video class="bg-video" autoplay muted loop playsinline>
-<source src="iStock-2253622537.mp4" type="video/mp4">
+<video autoplay muted loop playsinline class="video-bg">
+  <source src="../iStock-2253622537.mp4" type="video/mp4">
 </video>
-<div class="overlay"></div>
-
-<!-- Navigation -->
-
-<nav>
-  <div class="logo">SUBLIMINAL</div>
-  <div class="nav-links">
-    <a href="index.html">HOME</a>
-    <a href="#">SHOP ALL</a>
-    <a href="#" onclick="openCart()">CART (<span id="cart-count">0</span>)</a>
-    <span id="user-greeting" style="margin-left:18px;"></span>
-    <button id="logout-btn" onclick="logoutUser()" style="display:none; margin-left:10px; background:none; border:1px solid #fff; color:#fff; padding:4px 12px; border-radius:4px; cursor:pointer; font-size:12px;">Logout</button>
-  </div>
-</nav>
-
-<div class="header">SHOP ALL</div>
-
-
-<!-- Product Quick View Modal -->
-<div id="quickview-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:1200; align-items:center; justify-content:center;">
-  <div style="background:#111; color:#fff; border-radius:14px; max-width:95vw; width:370px; margin:auto; padding:28px 18px 18px 18px; position:relative; box-shadow:0 8px 32px #000a; text-align:center;">
-    <button onclick="closeQuickView()" style="position:absolute; top:10px; right:16px; background:none; border:none; color:#fff; font-size:20px; cursor:pointer;">&times;</button>
-    <img id="qv-img" src="" alt="Product Image" style="width:100%; max-width:220px; max-height:220px; object-fit:contain; margin-bottom:18px; border-radius:8px; background:#222;" />
-    <div id="qv-name" style="font-size:20px; font-weight:bold; margin-bottom:8px;"></div>
-    <div id="qv-price" style="font-size:15px; margin-bottom:10px;"></div>
-    <div id="qv-desc" style="font-size:13px; color:#ccc; margin-bottom:18px;">More details coming soon.</div>
-    <button id="qv-add-btn" class="add-btn" style="width:100%; margin:0;" onclick="addToCartFromQuickView()">ADD TO CART</button>
-  </div>
+<div class="video-bg">
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="../assets/iStock-2253622537.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </div>
-
-<div class="products">
+<header class="shop-header">
+  <nav class="main-navbar" style="background:#111; padding:18px 0; text-align:center; position:relative; z-index:10;">
+    <a href="../index.html">HOME</a>
+    <a href="shop-all.html">SHOP ALL</a>
+    <a href="men.html">MEN</a>
+    <a href="women.html">WOMEN</a>
+    <a href="kids.html">KIDS</a>
+    <a href="cart.html">CART</a>
+    <a href="profile.html">PROFILE</a>
+  </nav>
+  <h1 class="chrome-hearts">SHOP ALL</h1>
+</header>
+<main>
+  <div class="products">
 
 
 <!-- PRODUCT 1: SUBLIMINAL FLAME SET (Sweatsuit) -->
@@ -679,6 +146,43 @@ nav{
   <button class="add-btn" style="margin-top:10px; background:#fff; color:#111;" onclick="openQuickView('images/front-white-skull-tee.png','WHITE SKULL TEE','$80','White Skull Tee, bold and unique.')">QUICK VIEW</button>
 </div>
 
+<!-- New Product 8 -->
+<div class="product">
+  <div class="flip-container">
+    <div class="flipper">
+      <div class="front">
+        <img src="images/new-product8-front.png" alt="New Product 8 Front" class="product-image">
+      </div>
+      <div class="back">
+        <img src="images/new-product8-back.png" alt="New Product 8 Back" class="product-image">
+      </div>
+    </div>
+  </div>
+  <div class="product-name">NEW PRODUCT 8</div>
+  <div class="product-price">$95</div>
+  <button class="add-btn" onclick="addToCart('New Product 8',95)">ADD TO CART</button>
+  <button class="add-btn" style="margin-top:10px; background:#fff; color:#111;" onclick="openQuickView('images/new-product8-front.png','NEW PRODUCT 8','$95','Description for New Product 8.')">QUICK VIEW</button>
+</div>
+
+<!-- New Product 9 -->
+<div class="product">
+  <div class="flip-container">
+    <div class="flipper">
+      <div class="front">
+      <img src="images/front-og-leather-jacket.png" alt="Leather Jacket">
+
+      </div>
+      <div class="back">
+        <img src="images/back-of-leather.png" alt="Back of Leather Jacket" class="product-image">
+      </div>
+    </div>
+  </div>
+  <div class="product-name">NEW PRODUCT 9</div>
+  <div class="product-price">$105</div>
+  <button class="add-btn" onclick="addToCart('New Product 9',105)">ADD TO CART</button>
+  <button class="add-btn" style="margin-top:10px; background:#fff; color:#111;" onclick="openQuickView('images/new-product9-front.png','NEW PRODUCT 9','$105','Description for New Product 9.')">QUICK VIEW</button>
+</div>
+
 
 <!-- PRODUCT 7: BLACK SKULL LONG SLEEVE TEE -->
 <div class="product">
@@ -694,7 +198,7 @@ nav{
   </div>
   <div class="product-name">NEW PRODUCT 7</div>
   <div class="product-price">$90</div>
-  <button class="add-btn" onclick="addToCart('New Product 7',0)">ADD TO CART</button>
+  <button class="add-btn" onclick="addToCart('New Product 7',0)">ADD TO CART</bdeutton>
   <button class="add-btn" style="margin-top:10px; background:#fff; color:#111;" onclick="openQuickView('images/black-skull-front.png','NEW PRODUCT 7','$90','Black Skull Long Sleeve Tee, limited edition.')">QUICK VIEW</button>
 </div>
 
