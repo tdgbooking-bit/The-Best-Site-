@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="shop/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="font-family: 'Cinzel', 'UnifrakturCook', 'Playfair Display', Arial, sans-serif; color: #fff; letter-spacing: 1px; background: transparent;">
 <div id="cursor-glow"></div>
 <div class="hero-bg">
   <video class="hero-video" autoplay muted loop playsinline>
@@ -207,12 +207,15 @@ filterLinks.forEach(link => {
 </body>
 </body>
 <footer class="gallery-footer">
-  <nav style="display:flex;justify-content:center;gap:48px;padding:48px 0;background:transparent;">
-    <a href="/home.html" class="footer-link">HOME</a>
-    <a href="/shop/men.html" class="footer-link">MENS</a>
-    <a href="/shop/women.html" class="footer-link">WOMENS</a>
-    <a href="/shop/kids.html" class="footer-link">KIDS</a>
-  </nav>
+<nav class="main-navbar">
+  <a href="/index.html">HOME</a>
+  <a href="/shop/shop-all.html">SHOP ALL</a>
+  <a href="/shop/men.html">MEN</a>
+  <a href="/shop/women.html">WOMEN</a>
+  <a href="/shop/kids.html">KIDS</a>
+  <a href="/shop/cart.html">CART</a>
+  <a href="/shop/profile.html">PROFILE</a>
+</nav>
 </footer>
 <style>
   .gallery-footer {

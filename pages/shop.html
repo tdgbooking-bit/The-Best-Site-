@@ -4,10 +4,14 @@
         Your browser does not support the video tag.
     </video>
 </div>
-<nav class="shop-nav">
-    <a href="../../shop/shop-all.html" class="shop-link">SHOP ALL</a>
-    <a href="#" class="shop-link">MEN</a>
-    <a href="#" class="shop-link">WOMEN</a>
+<nav class="main-navbar">
+    <a href="/index.html">HOME</a>
+    <a href="/shop/shop-all.html">SHOP ALL</a>
+    <a href="/shop/men.html">MEN</a>
+    <a href="/shop/women.html">WOMEN</a>
+    <a href="/shop/kids.html">KIDS</a>
+    <a href="/shop/cart.html">CART</a>
+    <a href="/shop/profile.html">PROFILE</a>
 </nav>
 <h1>Shop Our Collection</h1>
 <section id="product-list">
@@ -94,16 +98,3 @@
             const referrer = sessionStorage.getItem('referrer');
             if (referrer) {
                 // Find user by id and add points
-                const users = JSON.parse(localStorage.getItem('users')) || {};
-                for (let u in users) {
-                    if (users[u].id == referrer) {
-                        users[u].points += points;
-                        localStorage.setItem('users', JSON.stringify(users));
-                        alert('Referrer earned ' + points + ' points!');
-                        break;
-                    }
-                }
-            }
-        });
-    });
-</script>

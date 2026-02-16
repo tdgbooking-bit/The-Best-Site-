@@ -12,7 +12,9 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-      font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
+      font-family: 'Cinzel', 'UnifrakturCook', 'Playfair Display', Arial, sans-serif;
+      color: #fff;
+      letter-spacing: 1px;
     }
     body {
       background: #000 url('fallback-image.jpg') no-repeat center center fixed;
@@ -30,21 +32,19 @@
   </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="/The-Best-Site-/index.html">SUBLIMINAL</a>
-    </div>
-    <ul>
-      <li><a href="/The-Best-Site-/index.html">Home</a></li>
-      <li><a href="/The-Best-Site-/shop/shop-all.html">Shop</a></li>
-      <li><a href="/The-Best-Site-/about.html">About</a></li>
-      <li><a href="/The-Best-Site-/contact.html">Contact</a></li>
-    </ul>
+  <nav class="main-navbar">
+    <a href="/index.html">HOME</a>
+    <a href="/shop/shop-all.html">SHOP ALL</a>
+    <a href="/shop/men.html">MEN</a>
+    <a href="/shop/women.html">WOMEN</a>
+    <a href="/shop/kids.html">KIDS</a>
+    <a href="/shop/cart.html">CART</a>
+    <a href="/shop/profile.html">PROFILE</a>
   </nav>
   <video class="video-bg" autoplay muted loop playsinline>
     <source src="iStock-2253622537.mp4" type="video/mp4">
   </video>
-  <a href="shop-all.html" class="enter-btn">ENTER</a>
+  <a href="shop-all.html" class="enter-btn" onclick="openModal()">ENTER</a>
   <a href="shop/kids.html" class="kids-btn">KIDS</a>
   <style>
     .enter-btn {

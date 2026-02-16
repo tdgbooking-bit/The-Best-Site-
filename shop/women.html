@@ -3,32 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WOMEN — Subliminal World</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+*{
+margin:0;
+<!DOCTYPE html>
+<html lang="en">
+}
+body{
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Women — Subliminal World</title>
+}
+.video-bg{
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <nav class="main-navbar" style="background:#111; padding:18px 0; text-align:center; position:relative; z-index:10;">
-    <a href="../index.html">HOME</a>
-    <a href="shop-all.html">SHOP ALL</a>
-    <a href="men.html">MEN</a>
-    <a href="women.html">WOMEN</a>
-    <a href="kids.html">KIDS</a>
-    <a href="cart.html">CART</a>
-    <a href="profile.html">PROFILE</a>
+<body style="font-family: 'Cinzel', 'UnifrakturCook', 'Playfair Display', Arial, sans-serif; color: #fff; letter-spacing: 1px; background: transparent;">
+  <div class="video-bg">
+    <video autoplay muted loop playsinline>
+}
+.video-bg video{
+      <source src="../iStock-2253622537.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+}
+.main-navbar{
+  </div>
+  <nav class="main-navbar">
+    <a href="/index.html">HOME</a>
+    <a href="/shop/shop-all.html">SHOP ALL</a>
+    <a href="/shop/men.html">MEN</a>
+    <a href="/shop/women.html">WOMEN</a>
+    <a href="/shop/kids.html">KIDS</a>
+}
+.main-navbar a{
+    <a href="/shop/cart.html">CART</a>
+    <a href="/shop/profile.html">PROFILE</a>
   </nav>
   <header class="shop-header">
     <h1 class="chrome-hearts">WOMEN</h1>
+}
+.page-title{
   </header>
   <section class="hero-section" style="text-align:center; margin:60px 0 40px 0;">
     <h2 style="font-size:2.2em; color:#ffb347; letter-spacing:2px; margin-bottom:18px;">Premium Women's Collection</h2>
     <p style="color:#ccc; font-size:1.2em; max-width:600px; margin:0 auto 18px auto;">Discover the latest in luxury streetwear for women. Shop exclusive tees, hoodies, and more. All products are now on the Shop All page for a seamless shopping experience.</p>
+}
+.products{
     <a href="shop-all.html" style="display:inline-block; margin-top:18px; padding:14px 38px; background:#ffb347; color:#111; border-radius:8px; font-size:1.1em; font-weight:bold; text-decoration:none; letter-spacing:2px; transition:background 0.2s;">SHOP ALL</a>
   </section>
     <div class="products">
 
   <!-- PRODUCT 1: SUBLIMINAL FLAME SET (Sweatsuit) -->
   <div class="product-card">
+}
+.product-card{
     <div class="product-inner">
       <div class="product-front">
         <img src="../images/front1.png.png" alt="Subliminal Flame Front">
@@ -41,9 +73,13 @@
     <div class="product-price">$180</div>
     <button class="add-btn" onclick="addToCart('Subliminal Flame Set',180)">ADD TO CART</button>
     <button class="add-btn" style="margin-top:10px; background:#fff; color:#111;" onclick="openQuickView('../images/front1.png.png','SUBLIMINAL FLAME SET','$180','A premium sweatsuit with flame design.')">QUICK VIEW</button>
+}
+.product-card:hover{
   </div>
 
   <!-- PRODUCT 2: PURPLE PINK SWEAT SUIT -->
+}
+.product-card img{
   <div class="product-card">
     <div class="product-inner">
       <div class="product-front">
@@ -53,16 +89,24 @@
         <img src="../images/back-of-purple-pink.png" alt="Purple Pink Set Back" class="product-image">
       </div>
     </div>
+}
+.product-card:hover img{
     <div class="product-name">PURPLE PINK SWEAT SUIT</div>
+}
+.product-title{
     <div class="product-price">$100</div>
     <button class="add-btn" onclick="addToCart('Purple Pink Sweat Suit',100)">ADD TO CART</button>
     <button class="add-btn" style="margin-top:10px; background:#fff; color:#111;" onclick="openQuickView('../images/front-of-purple-pink,png.png','PURPLE PINK SWEAT SUIT','$100','Purple and pink sweatsuit, soft and stylish.')">QUICK VIEW</button>
   </div>
 
+}
+.product-price{
   <!-- PRODUCT 3: BLACK AND GREY SET -->
   <div class="product-card">
     <div class="product-inner">
       <div class="product-front">
+}
+.buy-btn{
         <img src="../images/new-black-and-grey-front.png" alt="Black and Grey Set" class="product-image">
       </div>
       <div class="product-back">
@@ -77,23 +121,67 @@
 
   <!-- PRODUCT 4: LUXURY HOODIE -->
   <div class="product">
+}
+.buy-btn:hover{
     <div class="flip-container">
       <div class="flipper">
         <div class="front">
+}
+@media (max-width:700px){
           <img src="../images/front-navy-blue.png" alt="Navy Blue Hoodie Front" class="product-image">
         </div>
         <div class="back">
+}
           <img src="../images/navy-blue-back.png" alt="Navy Blue Hoodie Back" class="product-image">
         </div>
       </div>
+}
     </div>
     <div class="product-name">LUXURY HOODIE</div>
     <div class="product-price">$120</div>
+}
     <button class="add-btn" onclick="addToCart('Luxury Hoodie',120)">ADD TO CART</button>
     <button class="add-btn" style="margin-top:10px; background:#fff; color:#111;" onclick="openQuickView('../images/front-navy-blue.png','LUXURY HOODIE','$120','Blue & white flamer set, premium quality.')">QUICK VIEW</button>
+}
   </div>
 
   <!-- PRODUCT 5: CHROME HEARTS TEE -->
+}
+}
+  </style>
+</head>
+<body>
+<div class="video-bg">
+<video autoplay muted loop playsinline>
+<source src="../iStock-2253622537.mp4" type="video/mp4">
+</video>
+</div>
+<nav class="main-navbar">
+<a href="/index.html">HOME</a>
+<a href="/shop/shop-all.html">SHOP ALL</a>
+<a href="/shop/men.html">MEN</a>
+<a href="/shop/women.html">WOMEN</a>
+<a href="/shop/kids.html">KIDS</a>
+<a href="/shop/cart.html">CART</a>
+<a href="/shop/profile.html">PROFILE</a>
+</nav>
+<h1 class="page-title">WOMEN</h1>
+<div class="products">
+  <div class="product-card">
+    <img src="../images/product-women-tee-01.jpg" alt="Women's Tee">
+    <div class="product-title">Women's Tee</div>
+    <div class="product-price">$45</div>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+  <div class="product-card">
+    <img src="../images/product-women-hoodie-01.jpg" alt="Women's Hoodie">
+    <div class="product-title">Women's Hoodie</div>
+    <div class="product-price">$70</div>
+    <button class="buy-btn">Buy Now</button>
+  </div>
+</div>
+</body>
+</html>
   <div class="product">
     <div class="flip-container">
       <div class="flipper">
