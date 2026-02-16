@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=AdXfhuwRGMjF1lFTvWjIFj_kYppewLy9ZtRApTvgV8V3Zgpg0oY_J6OGbcWKeyCuw5zciDB48nUOfHWo&currency=USD"></script>
   <meta charset="UTF-8">
   <title>Checkout — SUBLIMINAL WORLD</title>
   <link rel="stylesheet" href="style.css">
@@ -116,6 +118,7 @@
     <img src="../images/logo.png" alt="Site Logo" style="width:120px;display:block;margin:0 auto 24px auto;filter:drop-shadow(0 2px 8px #fff);">
     <h1>Checkout</h1>
     <div class="order-summary" id="order-summary"></div>
+      <div id="paypal-button-container" style="margin:32px 0;"></div>
     <form id="checkout-form">
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" required>
@@ -128,6 +131,27 @@
     <div class="success-message" id="success-message" style="display:none;">Thank you for your order! (Demo only)</div>
   </div>
   <script>
+      // PayPal Button Integration
+      if (document.getElementById('paypal-button-container')) {
+        const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+        let total = 0;
+        cart.forEach(item => { total += item.price; });
+        paypal.Buttons({
+          createOrder: function(data, actions) {
+            return actions.order.create({
+              purchase_units: [{
+                amount: { value: total.toFixed(2) }
+              }]
+            });
+          },
+          onApprove: function(data, actions) {
+            return actions.order.capture().then(function(details) {
+              alert('Payment completed by ' + details.payer.name.given_name);
+              window.location.href = "thank-you.html";
+            });
+          }
+        }).render('#paypal-button-container');
+      }
     // Display order summary from cart
     const orderSummaryDiv = document.getElementById('order-summary');
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
