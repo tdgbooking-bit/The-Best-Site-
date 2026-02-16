@@ -1,3 +1,26 @@
+/* Professional styling for size select dropdown */
+.size-select {
+    width: 100%;
+    max-width: 260px;
+    padding: 14px 18px;
+    margin: 18px 0 24px 0;
+    font-size: 1.1em;
+    border-radius: 8px;
+    border: 2px solid #ffb347;
+    background: #222;
+    color: #fff;
+    font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
+    box-shadow: 0 2px 8px #0003;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.size-select:focus {
+    border-color: #ff5e62;
+    box-shadow: 0 4px 16px #ffb34744;
+}
+.size-select option {
+    background: #222;
+    color: #fff;
+}
 /* New Product Card Flip Effect for .product-card structure */
 .product-card {
     width: 300px;
