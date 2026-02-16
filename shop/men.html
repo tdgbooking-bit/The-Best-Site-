@@ -5,178 +5,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MEN — Subliminal World</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
   <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:'Cinzel',serif;
-color:white;
-overflow-x:hidden;
-background:black;
-}
-
-/* VIDEO BACKGROUND */
-.video-bg{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-z-index:-1;
-}
-
-.video-bg video{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-/* NAVBAR */
-.main-navbar{
-position:sticky;
-top:0;
-background:rgba(0,0,0,0.9);
-padding:18px;
-text-align:center;
-z-index:10;
-backdrop-filter:blur(10px);
-}
-
-.main-navbar a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-letter-spacing:2px;
-font-size:14px;
-}
-
-/* TITLE */
-.page-title{
-text-align:center;
-font-size:40px;
-margin:40px 0;
-letter-spacing:4px;
-}
-
-/* PRODUCTS GRID */
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-padding:40px;
-max-width:1400px;
-margin:0 auto;
-}
-
-.product-card{
-background:rgba(20,20,20,0.92);
-border-radius:18px;
-box-shadow:0 2px 18px rgba(0,0,0,0.18);
-overflow:hidden;
-display:flex;
-flex-direction:column;
-align-items:center;
-transition:transform 0.18s, box-shadow 0.18s;
-min-height:420px;
-position:relative;
-cursor:pointer;
-border:1.5px solid #222;
-}
-.product-card:hover{
-transform:translateY(-8px) scale(1.025);
-box-shadow:0 8px 32px rgba(255,255,255,0.10),0 2px 18px rgba(0,0,0,0.18);
-border-color:#fff;
-}
-.product-card img{
-width:100%;
-max-width:220px;
-height:220px;
-object-fit:cover;
-border-radius:12px;
-margin:1.2em 0 0.8em 0;
-box-shadow:0 2px 12px rgba(0,0,0,0.18);
-background:#222;
-transition:filter 0.2s;
-}
-.product-card:hover img{
-filter:brightness(1.08) saturate(1.2);
-}
-.product-title{
-font-size:1.3em;
-font-family:'Cinzel',serif;
-font-weight:700;
-margin:0.5em 0 0.2em 0;
-letter-spacing:2px;
-}
-.product-price{
-font-size:1.1em;
-color:#fff;
-font-family:'Playfair Display',serif;
-margin-bottom:0.7em;
-}
-.buy-btn{
-background:linear-gradient(90deg,#fff 0%,#e0e0e0 100%);
-color:#000;
-border:none;
-border-radius:8px;
-padding:0.7em 2.2em;
-font-size:1.1em;
-font-family:'Cinzel',serif;
-font-weight:700;
-letter-spacing:2px;
-margin-bottom:1.2em;
-margin-top:0.5em;
-cursor:pointer;
-box-shadow:0 2px 8px rgba(0,0,0,0.12);
-transition:background 0.2s, color 0.2s, box-shadow 0.2s;
-}
-.buy-btn:hover{
-background:#000;
-color:#fff;
-box-shadow:0 2px 18px rgba(255,255,255,0.12);
-}
-@media (max-width:700px){
-.main-navbar{
-font-size:1em;
-padding:0.7em 0 0.7em 0;
-}
-.page-title{
-font-size:2em;
-margin:24px 0;
-}
-.products{
-gap:1.2em;
-padding:1.2em 1vw 2em 1vw;
-}
-.product-card{
-min-height:340px;
-}
-.product-card img{
-max-width:140px;
-height:140px;
-}
-}
-</style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Cinzel', serif;
+      color: white;
+      background: black;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .video-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .video-bg video {
+      width: 100vw; height: 100vh;
+      object-fit: cover;
+      min-width: 100vw; min-height: 100vh;
+      position: absolute;
+      top: 0; left: 0;
+    }
+    .main-navbar {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.9);
+      padding: 18px;
+      text-align: center;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
+    .main-navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      letter-spacing: 2px;
+      font-size: 14px;
+    }
+    .page-title {
+      text-align: center;
+      font-size: 40px;
+      margin: 40px 0;
+      letter-spacing: 4px;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .product-card {
+      background: rgba(20,20,20,0.92);
+      border-radius: 18px;
+      box-shadow: 0 2px 18px rgba(0,0,0,0.18);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.18s, box-shadow 0.18s;
+      min-height: 420px;
+      position: relative;
+      cursor: pointer;
+      border: 1.5px solid #222;
+      padding-bottom: 1.2em;
+    }
+    .product-card:hover {
+      transform: translateY(-8px) scale(1.025);
+      box-shadow: 0 8px 32px rgba(255,255,255,0.10), 0 2px 18px rgba(0,0,0,0.18);
+      border-color: #fff;
+    }
+    .product-card img {
+      width: 100%;
+      max-width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin: 1.2em 0 0.8em 0;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+      background: #222;
+      transition: filter 0.2s;
+      display: block;
+    }
+    .product-card:hover img {
+      filter: brightness(1.08) saturate(1.2);
+    }
+    .product-title, .product-name {
+      font-size: 1.3em;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      margin: 0.5em 0 0.2em 0;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    .product-price {
+      font-size: 1.1em;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 0.7em;
+      text-align: center;
+    }
+    .buy-btn, .add-btn {
+      background: linear-gradient(90deg,#fff 0%,#e0e0e0 100%);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      padding: 0.7em 2.2em;
+      font-size: 1.1em;
+      font-family: 'Cinzel', serif;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 0.5em;
+      margin-top: 0.5em;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+      width: 80%;
+      max-width: 220px;
+      display: block;
+    }
+    .buy-btn:hover, .add-btn:hover {
+      background: #000;
+      color: #fff;
+      box-shadow: 0 2px 18px rgba(255,255,255,0.12);
+    }
+    @media (max-width: 700px) {
+      .main-navbar { font-size: 1em; padding: 0.7em 0 0.7em 0; }
+      .page-title { font-size: 2em; margin: 24px 0; }
+      .products { gap: 1.2em; padding: 1.2em 1vw 2em 1vw; }
+      .product-card { min-height: 340px; }
+      .product-card img { max-width: 140px; height: 140px; }
+      .buy-btn, .add-btn { font-size: 1em; padding: 0.5em 1.2em; }
+    }
+  </style>
 </head>
 <body>
 <div class="video-bg">
-<video autoplay muted loop playsinline>
-<source src="../iStock-2253622537.mp4" type="video/mp4">
-</video>
+  <video autoplay muted loop playsinline>
+    <source src="../iStock-2253622537.mp4" type="video/mp4">
+  </video>
 </div>
 <nav class="main-navbar">
-<a href="/index.html">HOME</a>
-<a href="/shop/shop-all.html">SHOP ALL</a>
-<a href="/shop/men.html">MEN</a>
-<a href="/shop/women.html">WOMEN</a>
-<a href="/shop/kids.html">KIDS</a>
-<a href="/shop/cart.html">CART</a>
-<a href="/shop/profile.html">PROFILE</a>
+  <a href="/index.html">HOME</a>
+  <a href="/shop/shop-all.html">SHOP ALL</a>
+  <a href="/shop/men.html">MEN</a>
+  <a href="/shop/women.html">WOMEN</a>
+  <a href="/shop/kids.html">KIDS</a>
+  <a href="/shop/cart.html">CART</a>
+  <a href="/shop/profile.html">PROFILE</a>
 </nav>
 <h1 class="page-title">MEN</h1>
 <div class="products">
@@ -203,6 +182,36 @@ height:140px;
     <div class="product-title">Leather Jacket</div>
     <div class="product-price">$220</div>
     <button class="buy-btn">Buy Now</button>
+  </div>
+  <div class="product-card">
+    <img src="../images/front1.png.png" alt="Subliminal Flame Front">
+    <div class="product-title">SUBLIMINAL FLAME SET</div>
+    <div class="product-price">$180</div>
+    <button class="buy-btn">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="../images/front-of-purple-pink,png.png" alt="Purple Pink Set Front">
+    <div class="product-title">PURPLE PINK SWEAT SUIT</div>
+    <div class="product-price">$100</div>
+    <button class="buy-btn">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="../images/new-black-and-grey-front.png" alt="Black and Grey Set">
+    <div class="product-title">BLACK AND GREY SET</div>
+    <div class="product-price">$100</div>
+    <button class="buy-btn">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="../images/front-navy-blue.png" alt="Navy Blue Hoodie Front">
+    <div class="product-title">LUXURY HOODIE</div>
+    <div class="product-price">$120</div>
+    <button class="buy-btn">Add to Cart</button>
+  </div>
+  <div class="product-card">
+    <img src="../images/front-of-blindman-tee-longsleeve.png" alt="Blindman Long Sleeve Tee Front">
+    <div class="product-title">CHROME HEARTS TEE</div>
+    <div class="product-price">$90</div>
+    <button class="buy-btn">Add to Cart</button>
   </div>
 </div>
 </body>
