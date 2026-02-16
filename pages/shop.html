@@ -1,100 +1,77 @@
+<!-- VIDEO BACKGROUND -->
 <div class="video-bg">
-    <video autoplay muted loop playsinline>
-        <source src="../assets/iStock-2253622537.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+  <video autoplay muted loop playsinline>
+    <source src="/iStock-2253622537.mp4" type="video/mp4">
+  </video>
 </div>
+
+<!-- NAVBAR -->
 <nav class="main-navbar">
-    <a href="/index.html">HOME</a>
-    <a href="/shop/shop-all.html">SHOP ALL</a>
-    <a href="/shop/men.html">MEN</a>
-    <a href="/shop/women.html">WOMEN</a>
-    <a href="/shop/kids.html">KIDS</a>
-    <a href="/shop/cart.html">CART</a>
-    <a href="/shop/profile.html">PROFILE</a>
+  <a href="/index.html">HOME</a>
+  <a href="/shop/shop-all.html">SHOP ALL</a>
+  <a href="/shop/men.html">MEN</a>
+  <a href="/shop/women.html">WOMEN</a>
+  <a href="/shop/kids.html">KIDS</a>
+  <a href="/shop/cart.html">CART</a>
+  <a href="/shop/profile.html">PROFILE</a>
 </nav>
+
 <h1>Shop Our Collection</h1>
+
 <section id="product-list">
-    <div class="product">
-        <h2>T-Shirt</h2>
-        <p>$20</p>
-        <button class="buy-btn" data-price="20">Buy Now</button>
-    </div>
-    <div class="product">
-        <h2>Hat</h2>
-        <p>$15</p>
-        <button class="buy-btn" data-price="15">Buy Now</button>
-    </div>
-    <div class="product">
-        <h2>Jacket</h2>
-        <p>$50</p>
-        <button class="buy-btn" data-price="50">Buy Now</button>
-    </div>
+  <div class="product">
+    <h2>T-Shirt</h2>
+    <p>$20</p>
+    <button class="buy-btn" data-price="20">Buy Now</button>
+  </div>
+
+  <div class="product">
+    <h2>Hat</h2>
+    <p>$15</p>
+    <button class="buy-btn" data-price="15">Buy Now</button>
+  </div>
+
+  <div class="product">
+    <h2>Jacket</h2>
+    <p>$50</p>
+    <button class="buy-btn" data-price="50">Buy Now</button>
+  </div>
 </section>
+
 <style>
-    .shop-nav {
-        width: 100vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2.5em;
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 10;
-        padding: 2em 0 1em 0;
-        background: rgba(0,0,0,0.35);
-        font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
-        letter-spacing: 2px;
-    }
-    .shop-link {
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.5em;
-        font-weight: bold;
-        padding: 0.2em 1.2em;
-        border-radius: 0.5em;
-        transition: background 0.2s, color 0.2s;
-    }
-    .shop-link:hover {
-        background: #fff;
-        color: #000;
-    }
-    .video-bg {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        overflow: hidden;
-    }
-    .video-bg video {
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
-        min-width: 100vw;
-        min-height: 100vh;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-</style>
-<script>
-    document.querySelectorAll('.buy-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const price = parseInt(btn.dataset.price);
-            // Simulate purchase
-            alert('Purchase successful!');
-            // Award points to referrer based on purchase amount
-            let points = 0;
-            if (price < 100) {
-                points = 25;
-            } else if (price < 200) {
-                points = 50;
-            } else {
-                points = 100;
-            }
-            const referrer = sessionStorage.getItem('referrer');
-            if (referrer) {
-                // Find user by id and add points
+body{
+margin:0;
+background:#000;
+color:#fff;
+font-family:Arial,sans-serif;
+}
+
+/* NAVBAR */
+.main-navbar{
+display:flex;
+justify-content:center;
+gap:25px;
+padding:18px;
+background:rgba(0,0,0,0.6);
+position:sticky;
+top:0;
+z-index:10;
+}
+
+.main-navbar a{
+color:#fff;
+text-decoration:none;
+letter-spacing:1px;
+}
+
+.main-navbar a:hover{
+background:#fff;
+color:#000;
+padding:5px 10px;
+border-radius:6px;
+}
+
+/* VIDEO */
+.video-bg{
+position:fixed;
+inse

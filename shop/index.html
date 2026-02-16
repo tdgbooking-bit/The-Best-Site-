@@ -1,132 +1,118 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>SHOP — SUBLIMINAL WORLD</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=UnifrakturCook:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-        <style>
-            html, body {
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                width: 100vw;
-                min-height: 100vh;
-                overflow-x: hidden;
-                background: transparent;
-                font-family: 'Cinzel', 'UnifrakturCook', 'Playfair Display', Arial, sans-serif;
-                color: #fff;
-                letter-spacing: 1px;
-            }
-            .video-bg {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100vh;
-                z-index: -1;
-                overflow: hidden;
-            }
-            .video-bg video {
-                width: 100vw;
-                height: 100vh;
-                object-fit: cover;
-                min-width: 100vw;
-                min-height: 100vh;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHOP — SUBLIMINAL WORLD</title>
+
+<link rel="stylesheet" href="/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+font-family:'Cinzel', serif;
+color:white;
+background:black;
+}
+
+/* VIDEO BACKGROUND */
+.video-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+.video-bg video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* HEADER */
+.shop-header{
+text-align:center;
+padding:80px 20px 20px;
+}
+
+/* PRODUCT GRID */
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+padding:40px;
+max-width:1200px;
+margin:auto;
+}
+
+.product img{
+width:100%;
+height:350px;
+object-fit:cover;
+}
+
+.product-info{
+text-align:center;
+margin-top:10px;
+}
+</style>
 </head>
+
 <body>
 
+<!-- VIDEO BACKGROUND -->
 <div class="video-bg">
-  <video autoplay muted loop playsinline>
-    <source src="../iStock-2253622537.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<video autoplay muted loop playsinline>
+<source src="/iStock-2253622537.mp4" type="video/mp4">
+</video>
 </div>
 
 <header class="shop-header">
-    <nav class="main-navbar">
-        <a href="/index.html">HOME</a>
-        <a href="/shop/shop-all.html">SHOP ALL</a>
-        <a href="/shop/men.html">MEN</a>
-        <a href="/shop/women.html">WOMEN</a>
-        <a href="/shop/kids.html">KIDS</a>
-        <a href="/shop/cart.html">CART</a>
-        <a href="/shop/profile.html">PROFILE</a>
-    </nav>
-    <h1 class="chrome-hearts">SHOP</h1>
-    <div class="scarcity-signals" style="margin-top:-18px;margin-bottom:18px;text-align:center;">
-        <span style="font-size:1.2em;color:#fff;background:rgba(0,0,0,0.18);padding:6px 18px;border-radius:8px;letter-spacing:2px;">Edition of 72</span>
-        <span style="font-size:1em;color:#ccc;margin-left:18px;letter-spacing:1px;">No restock</span>
-    </div>
-        <div class="drop-timer" style="font-size:1em;color:#bbb;text-align:center;margin-bottom:12px;letter-spacing:1px;">
-            Next release unlocks in <span id="drop-timer">04:12:09</span>
-        </div>
-<script>
-// Subtle drop timer (countdown)
-function startDropTimer(duration, display) {
-    let timer = duration, hours, minutes, seconds;
-    setInterval(function () {
-        hours = Math.floor(timer / 3600);
-        minutes = Math.floor((timer % 3600) / 60);
-        seconds = timer % 60;
-        display.textContent =
-            (hours < 10 ? "0" : "") + hours + ":" +
-            (minutes < 10 ? "0" : "") + minutes + ":" +
-            (seconds < 10 ? "0" : "") + seconds;
-        if (timer > 0) timer--;
-    }, 1000);
-}
-window.addEventListener('DOMContentLoaded', function() {
-    const dropTimer = document.getElementById('drop-timer');
-    if (dropTimer) {
-        startDropTimer(4*3600+12*60+9, dropTimer); // 4h 12m 9s
-    }
-});
-</script>
+<h1>SHOP</h1>
+
+<div>
+Edition of 72 • No Restock
+</div>
+
+<div>
+Next release in <span id="drop-timer">04:12:09</span>
+</div>
 </header>
 
 <section class="product-grid">
 
-    <div class="product">
-        <a href="kids.html" style="display:block;text-decoration:none;color:inherit;">
-            <img src="images/kids-flame.png" alt="Kids Collection" onerror="this.src='https://via.placeholder.com/300x400?text=Kids+Collection';">
-            <div class="product-info">
-                <p class="name">KIDS COLLECTION</p>
-                <p class="price">Shop Now</p>
-            </div>
-        </a>
-    </div>
-    <div class="product">
-        <img src="images/shopimagessubliminal-leather.PNG" alt="DISTRESSED LOGO TEE" onerror="this.src='https://via.placeholder.com/300x400?text=Logo+Tee';">
-        <div class="product-info">
-            <p class="name">DISTRESSED LOGO TEE</p>
-            <p class="price">$120</p>
-        </div>
-    </div>
+<div class="product">
+<a href="/shop/kids.html">
+<img src="/images/kids-flame.png">
+<div class="product-info">
+<p>KIDS COLLECTION</p>
+<p>Shop Now</p>
+</div>
+</a>
+</div>
 
-    <div class="product">
-        <img src="images/kids-flame.png" alt="SUBLIMINAL HOODIE" onerror="this.src='https://via.placeholder.com/300x400?text=Hoodie';">
-        <div class="product-info">
-            <p class="name">SUBLIMINAL HOODIE</p>
-            <p class="price">$220</p>
-        </div>
-    </div>
+<div class="product">
+<img src="/images/shopimagessubliminal-leather.PNG">
+<div class="product-info">
+<p>DISTRESSED LOGO TEE</p>
+<p>$120</p>
+</div>
+</div>
 
-    <div class="product">
-        <img src="images/kids-flame.png" alt="LIMITED BELT" onerror="this.src='https://via.placeholder.com/300x400?text=Belt';">
-        <div class="product-info">
-            <p class="name">LIMITED BELT</p>
-            <p class="price">$350</p>
-        </div>
-    </div>
+<div class="product">
+<img src="/images/kids-flame.png">
+<div class="product-info">
+<p>SUBLIMINAL HOODIE</p>
+<p>$220</p>
+</div>
+</div>
 
 </section>
 
-<script src="script.js"></script>
 </body>
 </html>

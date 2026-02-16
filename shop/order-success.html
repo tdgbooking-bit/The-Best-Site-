@@ -32,3 +32,99 @@
   <script src="../src/scripts/qr.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Success — SUBLIMINAL WORLD</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+body{
+margin:0;
+font-family:'Playfair Display', serif;
+color:white;
+}
+
+/* BACKGROUND VIDEO */
+.video-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+.video-bg video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+/* SUCCESS CARD */
+.success-container{
+background:rgba(0,0,0,0.75);
+padding:40px 30px;
+border-radius:12px;
+max-width:420px;
+margin:80px auto;
+text-align:center;
+}
+
+.qr-img{
+margin:20px auto;
+display:block;
+background:white;
+padding:10px;
+border-radius:8px;
+}
+
+.order-id{
+color:#aaa;
+margin-bottom:10px;
+}
+
+.instructions{
+color:#ccc;
+margin-top:15px;
+}
+
+a{
+color:white;
+text-decoration:none;
+display:block;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND VIDEO -->
+<div class="video-bg">
+<video autoplay muted loop playsinline>
+<source src="/iStock-2253622537.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="success-container">
+<h1>Thank You For Your Order!</h1>
+
+<div class="order-id" id="order-id"></div>
+
+<img id="qr-img" class="qr-img" src="" width="180" height="180">
+
+<div class="instructions">
+Scan this QR code to create your profile and earn points on every purchase.
+</div>
+
+<a href="/index.html">Return Home</a>
+</div>
+
+<script src="/js/qr.js"></script>
+
+</body>
+</html>

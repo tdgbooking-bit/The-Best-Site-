@@ -1,130 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/The-Best-Site-/css/style.css">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Subliminal</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-  <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      font-family: 'Cinzel', 'UnifrakturCook', 'Playfair Display', Arial, sans-serif;
-      color: #fff;
-      letter-spacing: 1px;
-    }
-    body {
-      background: #000 url('fallback-image.jpg') no-repeat center center fixed;
-      background-size: cover;
-    }
-    .video-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      object-fit: cover;
-      z-index: 1;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subliminal World</title>
+
+<style>
+body{
+margin:0;
+background:black;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial;
+}
+
+.enter-btn{
+background:white;
+color:black;
+border:none;
+padding:18px 40px;
+font-size:20px;
+cursor:pointer;
+}
+</style>
 </head>
+
 <body>
-  <nav class="main-navbar">
-    <a href="/index.html">HOME</a>
-    <a href="/shop/shop-all.html">SHOP ALL</a>
-    <a href="/shop/men.html">MEN</a>
-    <a href="/shop/women.html">WOMEN</a>
-    <a href="/shop/kids.html">KIDS</a>
-    <a href="/shop/cart.html">CART</a>
-    <a href="/shop/profile.html">PROFILE</a>
-  </nav>
-  <video class="video-bg" autoplay muted loop playsinline>
-    <source src="iStock-2253622537.mp4" type="video/mp4">
-  </video>
-  <a href="shop-all.html" class="enter-btn" onclick="openModal()">ENTER</a>
-  <a href="shop/kids.html" class="kids-btn">KIDS</a>
-  <style>
-    .enter-btn {
-          .kids-btn {
-            position: absolute;
-            top: 65%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(0.7);
-            font-size: 2.2em;
-            color: #fff;
-            background: rgba(255,76,96,0.85);
-            border: none;
-            border-radius: 8px;
-            padding: 0.3em 1.5em;
-            text-decoration: none;
-            letter-spacing: 4px;
-            font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
-            box-shadow: 0 2px 12px #000a;
-            transition: color 0.2s, background 0.2s, border 0.2s, transform 0.3s;
-            z-index: 11;
-            opacity: 0;
-            animation: popUpKids 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 1.2s forwards;
-          }
-          @keyframes popUpKids {
-            0% {
-              opacity: 0;
-              transform: translate(-50%, -50%) scale(0.7);
-            }
-            80% {
-              opacity: 1;
-              transform: translate(-50%, -50%) scale(1.1);
-            }
-            100% {
-              opacity: 1;
-              transform: translate(-50%, -50%) scale(1);
-            }
-          }
-          .kids-btn:hover {
-            color: #fff;
-            background: #ff4c60;
-            transform: translate(-50%, -50%) scale(1.08);
-          }
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0.8);
-      font-size: 4em;
-      color: #fff;
-      background: none;
-      border: none;
-      border-radius: 0;
-      padding: 0.5em 2em;
-      text-decoration: none;
-      letter-spacing: 8px;
-      font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
-      box-shadow: none;
-      transition: color 0.2s, background 0.2s, border 0.2s, transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-      z-index: 10;
-      opacity: 0;
-      animation: popUp 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.5s forwards;
-    }
-    @keyframes popUp {
-      0% {
-        opacity: 0;
-        transform: translate(-50%, -50%) scale(0.8);
-      }
-      80% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1.08);
-      }
-      100% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1);
-      }
-    }
-    .enter-btn:hover {
-      color: #ff4c60;
-      background: none;
-      transform: translate(-50%, -50%) scale(1.08);
-    }
-  </style>
+
+<button class="enter-btn"
+onclick="window.location.href='signup.html'">
+ENTER
+</button>
+
 </body>
 </html>

@@ -1,24 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kids Subliminal Vol 1 Sweat Suites</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids Subliminal Vol 1 Sweatsuit</title>
+
+<link rel="stylesheet" href="../style.css">
+
+<style>
+body{
+margin:0;
+background:#111;
+color:white;
+font-family:Arial, sans-serif;
+}
+
+/* NAVBAR */
+.main-navbar{
+background:#000;
+padding:18px;
+text-align:center;
+}
+
+.main-navbar a{
+color:white;
+text-decoration:none;
+margin:0 15px;
+}
+
+/* PRODUCT */
+.product-container{
+max-width:900px;
+margin:80px auto;
+padding:20px;
+text-align:center;
+}
+
+.product-container img{
+max-width:300px;
+width:100%;
+}
+
+.product-description{
+margin:20px 0;
+}
+
+.product-details{
+list-style:none;
+padding:0;
+color:#ccc;
+}
+
+.add-to-cart{
+background:white;
+color:black;
+border:none;
+padding:12px 25px;
+cursor:pointer;
+font-weight:bold;
+margin-top:20px;
+}
+
+.add-to-cart:hover{
+background:#333;
+color:white;
+}
+</style>
+
 </head>
+
 <body>
-    <div class="product-container">
-        <h1>Kids Subliminal Vol 1 Sweat Suites</h1>
-        <img src="images/shopimagessubliminal-leather.PNG" alt="Kids Subliminal Vol 1 Sweat Suite" style="max-width:300px;">
-        <p class="product-description">
-            Comfortable and stylish sweat suite for kids. Perfect for everyday wear and play. Available in multiple sizes.
-        </p>
-        <ul class="product-details">
-            <li>Material: Cotton blend</li>
-            <li>Sizes: XS, S, M, L, XL</li>
-            <li>Color: Black with Subliminal Vol 1 branding</li>
-        </ul>
-        <button class="add-to-cart">Add to Cart</button>
-    </div>
+
+<nav class="main-navbar">
+<a href="/index.html">HOME</a>
+<a href="/shop/shop-all.html">SHOP</a>
+<a href="/shop/cart.html">CART</a>
+</nav>
+
+<div class="product-container">
+
+<h1>Kids Subliminal Vol 1 Sweatsuit</h1>
+
+<img src="/images/shopimagessubliminal-leather.PNG" alt="Kids Sweatsuit">
+
+<p class="product-description">
+Comfortable and stylish sweatsuit for kids.
+Perfect for everyday wear and play.
+</p>
+
+<ul class="product-details">
+<li>Material: Cotton blend</li>
+<li>Sizes: XS, S, M, L, XL</li>
+<li>Color: Black with Subliminal Vol 1 branding</li>
+</ul>
+
+<button class="add-to-cart"
+onclick="window.location.href='/shop/cart.html'">
+Add to Cart
+</button>
+
+</div>
+
+<script src="/js/script.js"></script>
+
 </body>
 </html>
