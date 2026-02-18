@@ -1,0 +1,109 @@
+<div class="video-bg">
+    <video autoplay muted loop playsinline>
+        <source src="../assets/iStock-2253622537.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+<nav class="shop-nav">
+    <a href="../../shop/shop-all.html" class="shop-link">SHOP ALL</a>
+    <a href="#" class="shop-link">MEN</a>
+    <a href="#" class="shop-link">WOMEN</a>
+</nav>
+<h1>Shop Our Collection</h1>
+<section id="product-list">
+    <div class="product">
+        <h2>T-Shirt</h2>
+        <p>$20</p>
+        <button class="buy-btn" data-price="20">Buy Now</button>
+    </div>
+    <div class="product">
+        <h2>Hat</h2>
+        <p>$15</p>
+        <button class="buy-btn" data-price="15">Buy Now</button>
+    </div>
+    <div class="product">
+        <h2>Jacket</h2>
+        <p>$50</p>
+        <button class="buy-btn" data-price="50">Buy Now</button>
+    </div>
+</section>
+<style>
+    .shop-nav {
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5em;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        padding: 2em 0 1em 0;
+        background: rgba(0,0,0,0.35);
+        font-family: 'UnifrakturCook', 'Cinzel', 'Playfair Display', serif;
+        letter-spacing: 2px;
+    }
+    .shop-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5em;
+        font-weight: bold;
+        padding: 0.2em 1.2em;
+        border-radius: 0.5em;
+        transition: background 0.2s, color 0.2s;
+    }
+    .shop-link:hover {
+        background: #fff;
+        color: #000;
+    }
+    .video-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: -1;
+        overflow: hidden;
+    }
+    .video-bg video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        min-width: 100vw;
+        min-height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+</style>
+<script>
+    document.querySelectorAll('.buy-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const price = parseInt(btn.dataset.price);
+            // Simulate purchase
+            alert('Purchase successful!');
+            // Award points to referrer based on purchase amount
+            let points = 0;
+            if (price < 100) {
+                points = 25;
+            } else if (price < 200) {
+                points = 50;
+            } else {
+                points = 100;
+            }
+            const referrer = sessionStorage.getItem('referrer');
+            if (referrer) {
+                // Find user by id and add points
+                const users = JSON.parse(localStorage.getItem('users')) || {};
+                for (let u in users) {
+                    if (users[u].id == referrer) {
+                        users[u].points += points;
+                        localStorage.setItem('users', JSON.stringify(users));
+                        alert('Referrer earned ' + points + ' points!');
+                        break;
+                    }
+                }
+            }
+        });
+    });
+</script>
