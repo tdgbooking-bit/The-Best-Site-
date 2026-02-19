@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kids Shop</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: auto;
+    }
+    body, .brand-title, h1, h2, h3, h4, h5, h6, nav a, button {
+      font-family: 'UnifrakturCook', 'Cinzel', serif;
+      letter-spacing: 1px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      padding: 0;
+      border-radius: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-bg">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="../../images/iStock-2253622537.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="overlay"></div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="shop-all.html">Shop All</a></li>
+        <li><a href="kids.html" class="active">Kids</a></li>
+        <li><a href="../cart.html"><span style="font-size:1.2em;">🛒</span> Cart</a></li>
+        <li><a href="../profile.html">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Kids Shop</h1>
+    <p>Luxury and stylish outfits for kids and toddlers</p>
+  </section>
+  <main>
+    <section class="product-grid">
+      <!-- Unified Product Card Layout for All Products with Size Options and Add to Cart -->
+      <div class="product-card" data-product="Black Skull Tee" data-price="120.00">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/black-skull-front.png" alt="Black Skull Tee Front"></div>
+            <div class="back"><img src="../../images/back-black-skull.png" alt="Black Skull Tee Back"></div>
+          </div>
+        </div>
+        <div class="product-name">Black Skull Tee</div>
+        <div class="product-price">$120.00</div>
+        <label class="size-label" for="size-black-skull">Select Size:</label>
+        <select class="size-select" id="size-black-skull">
+          <option value="">Choose size</option>
+          <optgroup label="Toddler">
+            <option value="2T">2T</option>
+            <option value="3T">3T</option>
+            <option value="4T">4T</option>
+            <option value="5T">5T</option>
+          </optgroup>
+          <optgroup label="Kids">
+            <option value="Kids S">Kids S</option>
+            <option value="Kids M">Kids M</option>
+            <option value="Kids L">Kids L</option>
+          </optgroup>
+        </select>
+        <button onclick="addToCart('Black Skull Tee', 120.00, document.getElementById('size-black-skull').value)">Add to Cart</button>
+      </div>
+      <div class="product-card" data-product="White Skull Tee" data-price="120.00">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/front-white-skull-tee.png" alt="White Skull Tee Front"></div>
+            <div class="back"><img src="../../images/white-back-skull-tee.png" alt="White Skull Tee Back"></div>
+          </div>
+        </div>
+        <div class="product-name">White Skull Tee</div>
+        <div class="product-price">$120.00</div>
+        <label class="size-label" for="size-white-skull">Select Size:</label>
+        <select class="size-select" id="size-white-skull">
+          <option value="">Choose size</option>
+          <optgroup label="Toddler">
+            <option value="2T">2T</option>
+            <option value="3T">3T</option>
+            <option value="4T">4T</option>
+            <option value="5T">5T</option>
+          </optgroup>
+          <optgroup label="Kids">
+            <option value="Kids S">Kids S</option>
+            <option value="Kids M">Kids M</option>
+            <option value="Kids L">Kids L</option>
+          </optgroup>
+          <optgroup label="Young Adult">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </optgroup>
+        </select>
+        <button onclick="addToCart('White Skull Tee', 120.00, document.getElementById('size-white-skull').value)">Add to Cart</button>
+      </div>
+      <div class="product-card" data-product="Blindman Longsleeve" data-price="120.00">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/front-of-blindman-tee-longsleeve.png" alt="Blindman Longsleeve Front"></div>
+            <div class="back"><img src="../../images/front-of-blindman-tee-longsleeve.png" alt="Blindman Longsleeve Back"></div>
+          </div>
+        </div>
+        <div class="product-name">Blindman Longsleeve</div>
+        <div class="product-price">$120.00</div>
+        <label class="size-label" for="size-blindman">Select Size:</label>
+        <select class="size-select" id="size-blindman">
+          <option value="">Choose size</option>
+          <optgroup label="Toddler">
+            <option value="2T">2T</option>
+            <option value="3T">3T</option>
+            <option value="4T">4T</option>
+            <option value="5T">5T</option>
+          </optgroup>
+          <optgroup label="Kids">
+            <option value="Kids S">Kids S</option>
+            <option value="Kids M">Kids M</option>
+            <option value="Kids L">Kids L</option>
+          </optgroup>
+          <optgroup label="Young Adult">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </optgroup>
+        </select>
+        <button onclick="addToCart('Blindman Longsleeve', 120.00, document.getElementById('size-blindman').value)">Add to Cart</button>
+      </div>
+      <div class="product-card" data-product="Navy Blue Tee" data-price="100.00">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/front-navy-blue.png" alt="Navy Blue Tee Front"></div>
+            <div class="back"><img src="../../images/navy-blue-back.png" alt="Navy Blue Tee Back"></div>
+          </div>
+        </div>
+        <div class="product-name">Navy Blue Tee</div>
+        <div class="product-price">$100.00</div>
+        <label class="size-label" for="size-navy-blue">Select Size:</label>
+        <select class="size-select" id="size-navy-blue">
+          <option value="">Choose size</option>
+          <optgroup label="Toddler">
+            <option value="2T">2T</option>
+            <option value="3T">3T</option>
+            <option value="4T">4T</option>
+            <option value="5T">5T</option>
+          </optgroup>
+          <optgroup label="Kids">
+            <option value="Kids S">Kids S</option>
+            <option value="Kids M">Kids M</option>
+            <option value="Kids L">Kids L</option>
+          </optgroup>
+          <optgroup label="Young Adult">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </optgroup>
+        </select>
+        <button onclick="addToCart('Navy Blue Tee', 100.00, document.getElementById('size-navy-blue').value)">Add to Cart</button>
+      </div>
+      <div class="product-card" data-product="Purple Pink Tee" data-price="100.00">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/front-of-purple-pink,png.png" alt="Purple Pink Tee Front"></div>
+            <div class="back"><img src="../../images/back-of-purple-pink.png" alt="Purple Pink Tee Back"></div>
+          </div>
+        </div>
+        <div class="product-name">Purple Pink Tee</div>
+        <div class="product-price">$100.00</div>
+        <label class="size-label" for="size-purple-pink">Select Size:</label>
+        <select class="size-select" id="size-purple-pink">
+          <option value="">Choose size</option>
+          <optgroup label="Toddler">
+            <option value="2T">2T</option>
+            <option value="3T">3T</option>
+            <option value="4T">4T</option>
+            <option value="5T">5T</option>
+          </optgroup>
+          <optgroup label="Kids">
+            <option value="Kids S">Kids S</option>
+            <option value="Kids M">Kids M</option>
+            <option value="Kids L">Kids L</option>
+          </optgroup>
+          <optgroup label="Young Adult">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </optgroup>
+        </select>
+        <button onclick="addToCart('Purple Pink Tee', 100.00, document.getElementById('size-purple-pink').value)">Add to Cart</button>
+      </div>
+      <div class="product-card" data-product="Classic Men Tee" data-price="90.00">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/front1.png.png" alt="Classic Men Tee Front"></div>
+            <div class="back"><img src="../../images/back1.png.png" alt="Classic Men Tee Back"></div>
+          </div>
+        </div>
+        <div class="product-name">Classic Men Tee</div>
+        <div class="product-price">$90.00</div>
+        <label class="size-label" for="size-classic-men">Select Size:</label>
+        <select class="size-select" id="size-classic-men">
+          <option value="">Choose size</option>
+          <optgroup label="Toddler">
+            <option value="2T">2T</option>
+            <option value="3T">3T</option>
+            <option value="4T">4T</option>
+            <option value="5T">5T</option>
+          </optgroup>
+          <optgroup label="Kids">
+            <option value="Kids S">Kids S</option>
+            <option value="Kids M">Kids M</option>
+            <option value="Kids L">Kids L</option>
+          </optgroup>
+          <optgroup label="Young Adult">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </optgroup>
+        </select>
+        <button onclick="addToCart('Classic Men Tee', 90.00, document.getElementById('size-classic-men').value)">Add to Cart</button>
+      </div>
+      <div class="product-card" data-product="Leather Jacket" data-price="250.00">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/black-leather-hot-jacket.png" alt="Leather Jacket Front"></div>
+            <div class="back"><img src="../../images/back-of-leather - Copy.png" alt="Leather Jacket Back"></div>
+          </div>
+        </div>
+        <div class="product-name">Leather Jacket</div>
+        <div class="product-price">$250.00</div>
+        <label class="size-label" for="size-leather-jacket">Select Size:</label>
+        <select class="size-select" id="size-leather-jacket">
+          <option value="">Choose size</option>
+          <optgroup label="Toddler">
+            <option value="2T">2T</option>
+            <option value="3T">3T</option>
+            <option value="4T">4T</option>
+            <option value="5T">5T</option>
+          </optgroup>
+          <optgroup label="Kids">
+            <option value="Kids S">Kids S</option>
+            <option value="Kids M">Kids M</option>
+            <option value="Kids L">Kids L</option>
+          </optgroup>
+          <optgroup label="Young Adult">
+            <option value="XS">XS</option>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            <option value="XXL">XXL</option>
+          </optgroup>
+        </select>
+        <button onclick="addToCart('Leather Jacket', 250.00, document.getElementById('size-leather-jacket').value)">Add to Cart</button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2026 Your Brand. All rights reserved.</p>
+  </footer>
+  <script src="../../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{PRODUCT_NAME}}</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'UnifrakturCook', 'Cinzel', serif;
+      color: #fff;
+      background: #111;
+      margin: 0;
+      padding: 0;
+    }
+    .product-container {
+      max-width: 500px;
+      margin: 4rem auto;
+      background: rgba(0,0,0,0.7);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+      padding: 2.5rem 2rem 2rem 2rem;
+      text-align: center;
+    }
+    .product-image {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 12px;
+      margin: 0 auto 2rem auto;
+      display: block;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+      background: #222;
+    }
+    .product-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+      letter-spacing: 1.5px;
+    }
+    .product-price {
+      font-size: 1.3rem;
+      color: #bfe9ff;
+      margin-bottom: 1.2rem;
+      font-weight: 600;
+    }
+    .product-desc {
+      font-size: 1.08rem;
+      color: #e0e0e0;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .size-label {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      display: block;
+      color: #bfe9ff;
+    }
+    .size-select {
+      width: 60%;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      border: 1.5px solid #bfe9ff;
+      background: rgba(0,0,0,0.25);
+      color: #fff;
+      font-size: 1.08rem;
+      margin-bottom: 1.5rem;
+      margin-top: 0.2rem;
+    }
+    .add-to-cart-btn {
+      width: 70%;
+      padding: 0.8rem 0;
+      border: 1.5px solid #bfe9ff;
+      background: rgba(191,233,255,0.08);
+      color: #fff;
+      border-radius: 24px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.15em;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      backdrop-filter: blur(2px);
+      transition: background 0.2s, color 0.2s, border 0.2s;
+      margin-bottom: 1.2rem;
+    }
+    .add-to-cart-btn:hover {
+      background: #bfe9ff;
+      color: #111;
+      border: 2px solid #fff;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    }
+  </style>
+</head>
+<body>
+  <div class="product-container">
+    <img class="product-image" src="{{PRODUCT_IMAGE}}" alt="{{PRODUCT_NAME}} image">
+    <div class="product-title">{{PRODUCT_NAME}}</div>
+    <div class="product-price">${{PRODUCT_PRICE}}</div>
+    <div class="product-desc">{{PRODUCT_DESC}}</div>
+    <label for="size-select" class="size-label">Select Size:</label>
+    <select id="size-select" class="size-select">
+      <option value="">Choose size</option>
+      <option value="XS">XS</option>
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+      <option value="XXL">XXL</option>
+    </select>
+    <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+    <script>
+      function addToCart() {
+        var size = document.getElementById('size-select').value;
+        if (!size) {
+          alert('Please select a size before adding to cart.');
+          return;
+        }
+        alert('Added {{PRODUCT_NAME}} (Size: ' + size + ') to cart!');
+      }
+    </script>
+  </div>
+</body>
+</html>

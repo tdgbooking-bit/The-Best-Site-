@@ -1,5 +1,7 @@
+
 // Example: Stripe Checkout integration for your frontend
 // Replace YOUR_VERCEL_URL with your deployed backend URL
+// IMPORTANT: In your backend, set Stripe's success_url to "/css/pages/order-success.html" so customers see the marketing form after payment.
 
 async function checkout(cart, customer) {
   const response = await fetch('https://YOUR_VERCEL_URL/api/create-checkout-session', {

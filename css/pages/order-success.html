@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Success | Subliminal World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body { background: #000; color: #fff; font-family: 'UnifrakturCook', 'Cinzel', serif; margin: 0; }
+    .success-container { max-width: 420px; margin: 80px auto; background: rgba(0,0,0,0.92); border-radius: 18px; padding: 48px 32px; text-align: center; }
+    .success-title { font-size: 2em; letter-spacing: 6px; margin-bottom: 18px; color: #bfe9ff; }
+    .success-msg { margin-bottom: 30px; font-size: 1.1em; }
+    .marketing-form label { display: block; margin: 1.2em 0 0.3em 0; font-weight: 600; color: #bfe9ff; }
+    .marketing-form input { width: 90%; padding: 0.7em; border-radius: 10px; border: 1.5px solid #bfe9ff; background: rgba(0,0,0,0.25); color: #fff; font-size: 1em; margin-bottom: 1.2em; }
+    .marketing-form button { width: 70%; padding: 0.8em 0; border: 1.5px solid #bfe9ff; background: rgba(191,233,255,0.08); color: #fff; border-radius: 24px; cursor: pointer; font-weight: 700; font-size: 1.08em; letter-spacing: 1px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); backdrop-filter: blur(2px); transition: background 0.2s, color 0.2s, border 0.2s; margin-bottom: 1.2em; }
+    .marketing-form button:hover { background: #bfe9ff; color: #111; border: 2px solid #fff; }
+    @media (max-width: 600px) { .success-container { padding: 1.2em 0.5em; margin: 2em 0.2em; } .success-title { font-size: 1.3em; } }
+  </style>
+</head>
+<body>
+  <div class="success-container">
+    <div class="success-title">Thank You!</div>
+    <div class="success-msg">Your order was successful.<br>Want exclusive drops and offers? Join our list:</div>
+    <form class="marketing-form" id="marketingForm">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required pattern="[0-9\-\+\s\(\)]{7,}">
+      <button type="submit">Subscribe</button>
+    </form>
+    <div id="form-success" style="display:none;color:#bfe9ff;font-weight:600;margin-top:1.2em;">Subscribed! Welcome to Subliminal World 🔥</div>
+  </div>
+  <script>
+    document.getElementById('marketingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('marketingForm').style.display = 'none';
+      document.getElementById('form-success').style.display = 'block';
+      // Here you would send the data to your backend for marketing subscriptions
+    });
+  </script>
+</body>
+</html>

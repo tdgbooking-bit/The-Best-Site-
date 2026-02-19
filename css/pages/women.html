@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Women</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: auto;
+    }
+    body, .brand-title, h1, h2, h3, h4, h5, h6, nav a, button {
+      font-family: 'UnifrakturCook', 'Cinzel', serif;
+      letter-spacing: 1px;
+    }
+    /* ...existing code... */
+  </style>
+</head>
+<body>
+  <!-- ...existing code... -->
+</body>
+</html>
+  <meta charset="UTF-8">
+  <title>Women</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: auto;
+      overflow-y: auto;
+    }
+    body, .brand-title, h1, h2, h3, h4, h5, h6, nav a, button {
+      font-family: 'UnifrakturCook', 'Cinzel', serif;
+      letter-spacing: 1px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      padding: 0;
+      border-radius: 0;
+      margin: 2rem auto 1.5rem auto;
+      max-width: 900px;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+    nav ul {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li {
+      display: flex;
+      align-items: center;
+    }
+    nav ul li a {
+      color: #fff;
+      font-size: 1.15em;
+      font-weight: 500;
+      padding: 0;
+      border-radius: 0;
+      text-decoration: none;
+      transition: color 0.2s;
+      letter-spacing: 1px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover {
+      background: none;
+      color: #bfe9ff;
+      box-shadow: none;
+    }
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+      overflow: hidden;
+    }
+    .video-bg video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      min-width: 100vw;
+      min-height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      z-index: -1;
+    }
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 2rem auto;
+      max-width: 1200px;
+      min-height: 60vh;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 80vh;
+      width: 100vw;
+    }
+    .product-card {
+      width: 220px;
+      text-align: center;
+      color: #fff;
+      perspective: 1000px;
+      background: none;
+      border-radius: 0;
+      box-shadow: none;
+      padding: 0;
+    }
+    .flip-container {
+      width: 100%;
+      height: 180px;
+      margin-bottom: 1rem;
+      perspective: 1000px;
+    }
+    .flipper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+    }
+    .flip-container:hover .flipper,
+    .flip-container:focus .flipper,
+    .flip-container.flipped .flipper {
+      transform: rotateY(180deg);
+    }
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 0;
+      background: none;
+      object-fit: contain;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .front img, .back img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 0;
+    }
+    .back {
+      transform: rotateY(180deg);
+    }
+    .product-card button {
+      margin-top: 1rem;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      background: #fff;
+      color: #111;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+    }
+    .product-card button:hover {
+      background: #111;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="video-bg">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="../../images/iStock-2253622537.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="overlay"></div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../shop-all.html">Shop All</a></li>
+        <li><a href="../women.html" class="active">Women</a></li>
+        <li><a href="../pages/kids.html">Kids</a></li>
+        <li><a href="../men.html">Men</a></li>
+        <li><a href="../cart.html">Cart</a></li>
+          <li><a href="cart.html">Cart</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+        <li><a href="../profile.html">Profile</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Women’s Collection</h1>
+    <p>Luxury and stylish outfits for women</p>
+  </section>
+  <main>
+    <section class="product-grid">
+      <a href="product-black-skull-tee.html" class="product-card" style="text-decoration:none;">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/black-skull-front.png" alt="Black Skull Tee Front"></div>
+            <div class="back"><img src="../../images/back-black-skull.png" alt="Black Skull Tee Back"></div>
+          </div>
+        </div>
+      </a>
+        <li><a href="shop-all.html">Shop All</a></li>
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/new-black-and-grey-front.png" alt="Skull Flame Longsleeve Front"></div>
+            <div class="back"><img src="../../images/back-charcoal-grey-black.png.png" alt="Skull Flame Longsleeve Back"></div>
+          </div>
+        </div>
+      </a>
+      <a href="product-blindman-longsleeve.html" class="product-card" style="text-decoration:none;">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/front-of-blindman-tee-longsleeve.png" alt="Blindman Longsleeve Front"></div>
+            <div class="back"><img src="../../images/front-of-blindman-tee-longsleeve.png" alt="Blindman Longsleeve Back"></div>
+          </div>
+        </div>
+      </a>
+      <a href="product-white-skull-tee.html" class="product-card" style="text-decoration:none;">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/front-white-skull-tee.png" alt="White Skull Tee Front"></div>
+            <div class="back"><img src="../../images/white-back-skull-tee.png" alt="White Skull Tee Back"></div>
+          </div>
+        </div>
+      </a>
+      <a href="product-navy-blue-tee.html" class="product-card" style="text-decoration:none;">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/front-navy-blue.png" alt="Navy Blue Tee Front"></div>
+            <div class="back"><img src="../../images/navy-blue-back.png" alt="Navy Blue Tee Back"></div>
+          </div>
+        </div>
+      </a>
+      <a href="product-purple-pink-tee.html" class="product-card" style="text-decoration:none;">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/front-of-purple-pink,png.png" alt="Purple Pink Tee Front"></div>
+            <div class="back"><img src="../../images/back-of-purple-pink.png" alt="Purple Pink Tee Back"></div>
+          </div>
+        </div>
+      </a>
+      <a href="product-classic-men-tee.html" class="product-card" style="text-decoration:none;">
+        <div class="flip-container" tabindex="0">
+          <div class="flipper">
+            <div class="front"><img src="../../images/front1.png.png" alt="Classic Kids Tee Front"></div>
+            <div class="back"><img src="../../images/back1.png.png" alt="Classic Kids Tee Back"></div>
+          </div>
+        </div>
+      </a>
+      <!-- Add more product cards as needed -->
+    </section>
+  </main>
+    <!-- Women's Size Guide Modal -->
+    <!-- Universal size guide modal is now handled by size-guide.js -->
+  <footer>
+    <p>&copy; 2026 Your Brand. All rights reserved.</p>
+  </footer>
+  <script src="../../js/app.js"></script>
+            }
+            nav {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: none;
+              padding: 0;
+              border-radius: 0;
+              margin: 2rem auto 1.5rem auto;
+              max-width: 900px;
+              box-shadow: none;
+              backdrop-filter: none;
+            }
+            nav ul {
+              display: flex;
+              gap: 2.2rem;
+              list-style: none;
+              margin: 0;
+              padding: 0;
+            }
+            nav ul li {
+              display: flex;
+              align-items: center;
+            }
+            nav ul li a {
+              color: #fff;
+              font-size: 1.15em;
+              font-weight: 500;
+              padding: 0;
+              border-radius: 0;
+              text-decoration: none;
+              transition: color 0.2s;
+              letter-spacing: 1px;
+            }
+            nav ul li a.active,
+            nav ul li a:hover {
+              background: none;
+              color: #bfe9ff;
+              box-shadow: none;
+            }
+            .video-bg {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              z-index: -2;
+              overflow: hidden;
+            }
+            .video-bg video {
+              width: 100vw;
+              height: 100vh;
+              object-fit: cover;
+              min-width: 100vw;
+              min-height: 100vh;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+            .overlay {
+              position: fixed;
+              top: 0;
+              left: 0;
+              width: 100vw;
+              height: 100vh;
+              background: rgba(0,0,0,0.5);
+              z-index: -1;
+            }
+            .product-grid {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 2rem;
+              justify-content: center;
+              align-items: flex-start;
+              margin: 2rem auto;
+              max-width: 1200px;
+              min-height: 60vh;
+            }
+            main {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              min-height: 80vh;
+              width: 100vw;
+            }
+            .product-card {
+              width: 220px;
+              text-align: center;
+              color: #fff;
+              perspective: 1000px;
+              background: none;
+              border-radius: 0;
+              box-shadow: none;
+              padding: 0;
+            }
+            .flip-container {
+              width: 100%;
+              height: 180px;
+              margin-bottom: 1rem;
+              perspective: 1000px;
+            }
+            .flipper {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              transition: transform 0.6s;
+              transform-style: preserve-3d;
+            }
+            .flip-container:hover .flipper,
+            .flip-container:focus .flipper,
+            .flip-container.flipped .flipper {
+              transform: rotateY(180deg);
+            }
+            .front, .back {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              backface-visibility: hidden;
+              border-radius: 0;
+              background: none;
+              object-fit: contain;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .front img, .back img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+              border-radius: 0;
+            }
+            .back {
+              transform: rotateY(180deg);
+            }
+            .product-card button {
+              margin-top: 1rem;
+              padding: 0.5rem 1.5rem;
+              border: none;
+              background: #fff;
+              color: #111;
+              border-radius: 4px;
+              cursor: pointer;
+              font-weight: bold;
+              transition: background 0.2s, color 0.2s;
+            }
+            .product-card button:hover {
+              background: #111;
+              color: #fff;
+              border: 1px solid #fff;
+            }
+          </style>
+        </head>
+        <body>
+          <div class="video-bg">
+            <video autoplay muted loop playsinline id="bg-video">
+              <source src="../../images/iStock-2253622537.mov" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="overlay"></div>
+          <header>
+            <nav>
+              <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../shop-all.html">Shop All</a></li>
+                <li><a href="../women.html" class="active">Women</a></li>
+                <li><a href="../pages/kids.html">Kids</a></li>
+                <li><a href="../men.html">Men</a></li>
+                <li><a href="../cart.html">Cart</a></li>
+                <li><a href="../profile.html">Profile</a></li>
+              </ul>
+            </nav>
+          </header>
+          <section class="hero">
+            <h1>Women’s Collection</h1>
+            <p>Luxury and stylish outfits for women</p>
+          </section>
+          <main>
+            <section class="product-grid">
+              <a href="product-black-skull-tee.html" class="product-card" style="text-decoration:none;">
+                <div class="flip-container" tabindex="0">
+                  <div class="flipper">
+                    <div class="front"><img src="../../images/black-skull-front.png" alt="Black Skull Tee Front"></div>
+                    <div class="back"><img src="../../images/back-black-skull.png" alt="Black Skull Tee Back"></div>
+                  </div>
+                </div>
+              </a>
+              <a href="product-skull-flame-longsleeve.html" class="product-card" style="text-decoration:none;">
+                <div class="flip-container" tabindex="0">
+                  <div class="flipper">
+                    <div class="front"><img src="../../images/new-black-and-grey-front.png" alt="Skull Flame Longsleeve Front"></div>
+                    <div class="back"><img src="../../images/back-charcoal-grey-black.png.png" alt="Skull Flame Longsleeve Back"></div>
+                  </div>
+                </div>
+              </a>
+              <a href="product-blindman-longsleeve.html" class="product-card" style="text-decoration:none;">
+                <div class="flip-container" tabindex="0">
+                  <div class="flipper">
+                    <div class="front"><img src="../../images/front-of-blindman-tee-longsleeve.png" alt="Blindman Longsleeve Front"></div>
+                    <div class="back"><img src="../../images/front-of-blindman-tee-longsleeve.png" alt="Blindman Longsleeve Back"></div>
+                  </div>
+                </div>
+              </a>
+              <a href="product-white-skull-tee.html" class="product-card" style="text-decoration:none;">
+                <div class="flip-container" tabindex="0">
+                  <div class="flipper">
+                    <div class="front"><img src="../../images/front-white-skull-tee.png" alt="White Skull Tee Front"></div>
+                    <div class="back"><img src="../../images/white-back-skull-tee.png" alt="White Skull Tee Back"></div>
+                  </div>
+                </div>
+              </a>
+              <a href="product-navy-blue-tee.html" class="product-card" style="text-decoration:none;">
+                <div class="flip-container" tabindex="0">
+                  <div class="flipper">
+                    <div class="front"><img src="../../images/front-navy-blue.png" alt="Navy Blue Tee Front"></div>
+                    <div class="back"><img src="../../images/navy-blue-back.png" alt="Navy Blue Tee Back"></div>
+                  </div>
+                </div>
+              </a>
+              <a href="product-purple-pink-tee.html" class="product-card" style="text-decoration:none;">
+                <div class="flip-container" tabindex="0">
+                  <div class="flipper">
+                    <div class="front"><img src="../../images/front-of-purple-pink,png.png" alt="Purple Pink Tee Front"></div>
+                    <div class="back"><img src="../../images/back-of-purple-pink.png" alt="Purple Pink Tee Back"></div>
+                  </div>
+                </div>
+              </a>
+              <a href="product-classic-men-tee.html" class="product-card" style="text-decoration:none;">
+                <div class="flip-container" tabindex="0">
+                  <div class="flipper">
+                    <div class="front"><img src="../../images/front1.png.png" alt="Classic Kids Tee Front"></div>
+                    <div class="back"><img src="../../images/back1.png.png" alt="Classic Kids Tee Back"></div>
+                  </div>
+                </div>
+              </a>
+              <!-- Add more product cards as needed -->
+            </section>
+          </main>
+            <!-- Women's Size Guide Modal -->
+            <!-- Universal size guide modal is now handled by size-guide.js -->
+          <footer>
+            <p>&copy; 2026 Your Brand. All rights reserved.</p>
+          </footer>
+          <script src="../../js/app.js"></script>
+
+

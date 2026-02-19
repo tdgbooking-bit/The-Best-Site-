@@ -1,39 +1,214 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Subliminal World</title>
+	<html lang="en">
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SUBLIMINAL WORLD</title>
 
-<style>
-body{
-margin:0;
-background:black;
-color:white;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-font-family:Arial;
-}
+	<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 
-.enter-btn{
-background:white;
-color:black;
-border:none;
-padding:18px 40px;
-font-size:20px;
-cursor:pointer;
-}
-</style>
-</head>
+	<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
 
-<body>
 
-<button class="enter-btn"
-onclick="window.location.href='signup.html'">
-ENTER
-</button>
+	body {
+		/* background: radial-gradient(circle at center, #111 0%, #000 80%); */
+		color: white;
+		font-family: 'Cinzel', serif;
+		height: 100vh;
+		overflow: hidden;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
 
-</body>
-</html>
+	.enter, .thank-you h2 {
+		font-family: 'UnifrakturCook', 'Cinzel', serif;
+	}
+
+	/* Subtle grain overlay */
+	.logo {
+		font-family: 'UnifrakturCook', cursive;
+		font-size: 48px;
+		letter-spacing: 6px;
+		margin-bottom: 40px;
+	}
+	body::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: url('https://grainy-gradients.vercel.app/noise.svg');
+		opacity: 0.05;
+		pointer-events: none;
+	}
+
+	/* ENTER BUTTON */
+	.enter {
+		font-size: 52px;
+		letter-spacing: 10px;
+		cursor: pointer;
+		transition: 0.4s ease;
+		animation: fadeIn 2s ease forwards;
+	}
+
+	.enter:hover {
+		text-shadow: 0 0 25px white;
+		transform: scale(1.08);
+	}
+
+	/* Form Section */
+	.form-section {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.countdown {
+		font-size: 18px;
+		letter-spacing: 6px;
+		margin-bottom: 30px;
+	}
+
+	input {
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid white;
+		color: white;
+		padding: 15px;
+		margin: 20px 0;
+		width: 280px;
+		text-align: center;
+		letter-spacing: 3px;
+		font-size: 14px;
+	}
+
+	input::placeholder {
+		color: rgba(255,255,255,0.6);
+		text-transform: uppercase;
+	}
+
+	button {
+		background: transparent;
+		border: none;
+		color: white;
+		font-size: 16px;
+		letter-spacing: 4px;
+		margin-top: 20px;
+		cursor: pointer;
+		transition: 0.4s;
+	}
+
+	button:hover {
+		text-shadow: 0 0 15px white;
+	}
+
+	/* Thank You Screen */
+	.thank-you {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.thank-you h2 {
+		font-size: 28px;
+		letter-spacing: 6px;
+		margin-bottom: 10px;
+	}
+
+	.thank-you p {
+		font-size: 12px;
+		letter-spacing: 4px;
+		opacity: 0.7;
+	}
+
+	/* Animations */
+	@keyframes fadeIn {
+		from {opacity:0;}
+		to {opacity:1;}
+	}
+
+	.smoke {
+		position: fixed;
+		width: 200%;
+		height: 200%;
+		background: url('https://i.imgur.com/8IuucQZ.png') repeat;
+		background-size: cover;
+		opacity: 0.07;
+		animation: smokeMove 60s linear infinite;
+		z-index: -1;
+	}
+
+	@keyframes smokeMove {
+		from { transform: translate(0,0); }
+		to { transform: translate(-500px, -500px); }
+	}
+	</style>
+	</head>
+
+	<body>
+	<div class="smoke"></div>
+
+	<!-- Video Background -->
+	<div class="video-bg" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-2;overflow:hidden;">
+	  <video autoplay muted loop playsinline id="bg-video" style="width:100vw;height:100vh;object-fit:cover;min-width:100vw;min-height:100vh;position:absolute;top:0;left:0;">
+	    <source src="images/iStock-2253622537.mov" type="video/mp4">
+	    Your browser does not support the video tag.
+	  </video>
+	</div>
+
+	<audio id="bellSound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124bfae3c7.mp3"></audio>
+
+	<div id="enterScreen">
+		<div class="countdown" id="countdown"></div>
+		<div class="enter" onclick="showForm()">ENTER</div>
+	</div>
+
+	<div class="form-section" id="formSection">
+		<input type="email" placeholder="EMAIL" required>
+		<input type="text" placeholder="PHONE NUMBER" required>
+		<button onclick="submitForm()">JOIN THE DROP</button>
+	</div>
+
+	<div class="thank-you" id="thankYou">
+		<h2>THANK YOU FOR MAKING HISTORY</h2>
+		<p>YOU ARE NOW PART OF SUBLIMINAL WORLD</p>
+	</div>
+
+	<script>
+	function showForm() {
+		document.getElementById("bellSound").play();
+		document.getElementById("enterScreen").style.display = "none";
+		document.getElementById("formSection").style.display = "flex";
+	}
+
+	/* Countdown Timer */
+	const launchDate = new Date("March 15, 2026 00:00:00").getTime();
+
+	const timer = setInterval(function() {
+		const now = new Date().getTime();
+		const distance = launchDate - now;
+
+		if (distance < 0) {
+			clearInterval(timer);
+			window.location.href = "shop.html";
+		}
+
+		const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		document.getElementById("countdown").innerHTML =
+			days + " DAYS UNTIL RELEASE";
+	}, 1000);
+
+	function submitForm() {
+		document.getElementById("formSection").style.display = "none";
+		document.getElementById("thankYou").style.display = "flex";
+	}
+	</script>
+
+	</body>
+	</html>

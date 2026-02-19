@@ -1,0 +1,312 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skull Flame Longsleeve | Subliminal</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+body{
+  font-family:'Cinzel', serif;
+  background:black;
+.main-navbar{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 60px;
+  background:rgba(0,0,0,0.95);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.main-navbar a{
+  color:white;
+  text-decoration:none;
+  letter-spacing:2px;
+}
+.product-container{
+  display:flex;
+  gap:80px;
+  padding:80px;
+  max-width:1400px;
+  margin:auto;
+}
+.product-images{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+.product-images img{
+  width:100%;
+  object-fit:cover;
+}
+.product-info{
+  flex:1;
+  max-width:500px;
+.product-info h1{
+  font-size:32px;
+  letter-spacing:3px;
+  margin-bottom:20px;
+}
+.price{
+  font-size:22px;
+  margin-bottom:30px;
+}
+.description{
+  margin-bottom:40px;
+  opacity:0.8;
+  line-height:1.6;
+}
+select{
+  width:100%;
+  padding:12px;
+  margin-bottom:25px;
+  background:black;
+  color:white;
+  border:1px solid white;
+}
+.add-to-cart{
+  width:100%;
+  padding:15px;
+  background:white;
+  color:black;
+  border:none;
+  cursor:pointer;
+  letter-spacing:2px;
+  transition:0.3s;
+}
+.add-to-cart:hover{
+  background:grey;
+}
+@media(max-width:900px){
+  .product-container{
+    flex-direction:column;
+    padding:40px;
+  }
+}
+</style>
+</head>
+<body>
+<nav class="main-navbar">
+  <a href="../index.html">HOME</a>
+  <a href="../shop-all.html">SHOP ALL</a>
+  <a href="../cart.html">CART</a>
+</nav>
+<section class="product-container">
+  <div class="product-images">
+    <img src="../images/new-black-and-grey-front.png" alt="Skull Flame Longsleeve Front">
+    <img src="../images/back-charcoal-grey-black.png" alt="Skull Flame Longsleeve Back">
+  </div>
+  <div class="product-info">
+    <h1>SKULL FLAME LONGSLEEVE</h1>
+  <p class="price">$120</p>
+  <p class="description">Premium heavyweight cotton longsleeve with skull flame graphic. Subliminal exclusive. Limited quantities available.</p>
+  <label for="size">Select Size</label>
+    <select id="size">
+      <optgroup label="Adults">
+        <option>S</option>
+  <option>M</option>
+  <option>L</option>
+  <option>XL</option>
+        <option>XXL</option>
+      </optgroup>
+    </select>
+    <button class="add-to-cart">ADD TO CART</button>
+  </div>
+</section>
+<script>
+  function addToCart() {
+    var size = document.getElementById('size').value;
+    if (!size) {
+      alert('Please select a size before adding to cart.');
+      return;
+    }
+    alert('Added Skull Flame Longsleeve (Size: ' + size + ') to cart!');
+  }
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skull Flame Longsleeve | Subliminal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+  *{
+    margin:0;
+    padding:0;
+  body{
+    font-family:'Cinzel', serif;
+    background:black;
+  /* NAVBAR */
+  .main-navbar{
+    display:flex;
+  .main-navbar a{
+    color:white;
+    text-decoration:none;
+  /* PRODUCT SECTION */
+  .product-container{
+    display:flex;
+  /* IMAGES */
+  .product-images{
+    flex:1;
+  .product-images img{
+    width:100%;
+    object-fit:cover;
+  /* PRODUCT INFO */
+  .product-info{
+    flex:1;
+  .product-info h1{
+    font-size:32px;
+    letter-spacing:3px;
+  .price{
+    font-size:22px;
+    margin-bottom:30px;
+  .description{
+    margin-bottom:40px;
+    opacity:0.8;
+  /* SIZE SELECT */
+  select{
+    width:100%;
+  /* BUTTON */
+  .add-to-cart{
+    width:100%;
+  .add-to-cart:hover{
+    background:grey;
+  }
+  /* RESPONSIVE */
+  @media(max-width:900px){
+    .product-container{
+  </style>
+  </head>
+
+  <body>
+  <nav class="main-navbar">
+    <a href="../index.html">HOME</a>
+    <a href="../shop-all.html">SHOP ALL</a>
+  <section class="product-container">
+
+    <!-- LEFT SIDE IMAGES -->
+    <div class="product-images">
+      <img src="../images/new-black-and-grey-front.png" alt="Skull Flame Longsleeve Front">
+      <img src="../images/back-charcoal-grey-black.png.png" alt="Skull Flame Longsleeve Back">
+    </div>
+
+    <!-- RIGHT SIDE INFO -->
+    <div class="product-info">
+      <h1>SKULL FLAME LONGSLEEVE</h1>
+      <p class="price">$120</p>
+
+      <p class="description">
+        Premium heavyweight cotton longsleeve with skull flame graphic. Subliminal exclusive. Limited quantities available.
+      </p>
+
+      <label for="size">Select Size</label>
+      <select id="size">
+        <optgroup label="Adults">
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+          <option>XL</option>
+          <option>XXL</option>
+        </optgroup>
+      </select>
+
+      <button class="add-to-cart">ADD TO CART</button>
+    </div>
+
+  </section>
+
+  </body>
+  </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skull Flame Longsleeve</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <style>
+    .video-bg { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -2; overflow: hidden; pointer-events: none; }
+    .video-bg video { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; min-width: 100vw; min-height: 100vh; }
+    .overlay { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(0,0,0,0.5); z-index: -1; }
+    body { font-family: 'UnifrakturCook', 'Cinzel', serif; color: #fff; background: transparent; }
+    .product-detail { max-width: 600px; margin: 4rem auto; background: none; padding: 0; border-radius: 0; box-shadow: none; }
+    .product-detail img { width: 100%; max-width: 350px; display: block; margin: 0 auto 1.5rem auto; border-radius: 0; }
+    .flip-container { width: 100%; height: 350px; margin-bottom: 1.5rem; perspective: 1000px; }
+    .flipper { position: relative; width: 100%; height: 100%; transition: transform 0.6s; transform-style: preserve-3d; }
+    .flip-container:hover .flipper, .flip-container:focus .flipper, .flip-container.flipped .flipper { transform: rotateY(180deg); }
+    .front, .back { position: absolute; width: 100%; height: 100%; backface-visibility: hidden; border-radius: 0; background: none; object-fit: contain; display: flex; align-items: center; justify-content: center; }
+    .front img, .back img { width: 100%; height: 100%; object-fit: contain; border-radius: 0; }
+    .back { transform: rotateY(180deg); }
+    .add-to-cart-btn { margin-top: 1.5rem; padding: 0.7rem 2.5rem; border: 1.5px solid rgba(255,255,255,0.7); background: rgba(255,255,255,0.15); color: #fff; border-radius: 24px; cursor: pointer; font-weight: 600; font-size: 1.15em; letter-spacing: 1px; box-shadow: 0 2px 12px rgba(0,0,0,0.15); backdrop-filter: blur(2px); transition: background 0.2s, color 0.2s, border 0.2s; }
+    .add-to-cart-btn:hover { background: rgba(255,255,255,0.35); color: #111; border: 2px solid #fff; box-shadow: 0 4px 24px rgba(0,0,0,0.25); }
+  </style>
+</head>
+<body>
+  <div class="video-bg">
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="../../images/iStock-2253622537.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div class="overlay"></div>
+  <div class="product-detail">
+    <div class="flip-container" tabindex="0">
+      <div class="flipper">
+        <div class="front"><img src="../../images/new-black-and-grey-front.png" alt="Skull Flame Longsleeve Front"></div>
+        <div class="back"><img src="../../images/back-charcoal-grey-black.png.png" alt="Skull Flame Longsleeve Back"></div>
+      </div>
+    </div>
+    <h1>Skull Flame Longsleeve</h1>
+    <p><strong>Price:</strong> $120.00</p>
+    <div class="sizes"><strong>Sizes:</strong> S, M, L, XL, XXL</div>
+    <p>Premium longsleeve with skull flame design. Soft, stylish, and perfect for men who want to stand out.</p>
+    <div class="size-guide">
+      <h2>Men's Size Guide</h2>
+      <table style="width:100%;border-collapse:collapse;font-size:1em;">
+        <thead>
+          <tr style="background:#bfe9ff;color:#111;">
+            <th style="padding:0.5em 1.2em 0.5em 0.8em;text-align:left;border-bottom:1px solid #ccc;">Size</th>
+            <th style="padding:0.5em 0.8em 0.5em 1.2em;text-align:left;border-bottom:1px solid #ccc;">Recommended Fit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td style="padding:0.5em 1.2em 0.5em 0.8em;text-align:left;">S</td><td style="padding:0.5em 0.8em 0.5em 1.2em;text-align:left;">Teens/Small Adults</td></tr>
+          <tr><td style="padding:0.5em 1.2em 0.5em 0.8em;text-align:left;">M</td><td style="padding:0.5em 0.8em 0.5em 1.2em;text-align:left;">Average Adult</td></tr>
+          <tr><td style="padding:0.5em 1.2em 0.5em 0.8em;text-align:left;">L</td><td style="padding:0.5em 0.8em 0.5em 1.2em;text-align:left;">Large Adult</td></tr>
+          <tr><td style="padding:0.5em 1.2em 0.5em 0.8em;text-align:left;">XL</td><td style="padding:0.5em 0.8em 0.5em 1.2em;text-align:left;">Extra Large Adult</td></tr>
+          <tr><td style="padding:0.5em 1.2em 0.5em 0.8em;text-align:left;">XXL</td><td style="padding:0.5em 0.8em 0.5em 1.2em;text-align:left;">Oversized Adult</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:1.2rem;font-size:0.95em;color:#333;text-align:center;">For best fit, choose your usual tee size or contact us for measurements.</p>
+    </div>
+    <label for="size-select" style="margin-top:1.5rem;display:block;font-size:1.1em;">Select Size:</label>
+    <select id="size-select" style="margin:0.5rem 0 1.5rem 0;padding:0.5rem 1.2rem;border-radius:8px;font-size:1em;">
+      <option value="">Choose size</option>
+      <option value="S">S</option>
+      <option value="M">M</option>
+      <option value="L">L</option>
+      <option value="XL">XL</option>
+      <option value="XXL">XXL</option>
+    </select>
+    <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+    <script>
+      function addToCart() {
+        var size = document.getElementById('size-select').value;
+        if (!size) {
+          alert('Please select a size before adding to cart.');
+          return;
+        }
+        alert('Added Skull Flame Longsleeve (Size: ' + size + ') to cart!');
+      }
+    </script>
+  </div>
+</body>
+</html>
